@@ -10,7 +10,7 @@ btnEnviar.addEventListener("click", function(event){
     event.preventDefault();
     let pattern = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");
     let telefonoern = new RegExp("[0-9]{10}");
-    let nombresern = new RegExp("[a-zA-Z]{4,30}");
+    let nombresern = new RegExp("^[A-Za-z]{4,10}$");
     alertValidacionesTexto.innerHTML="";
     alertValidaciones.style.display="none";
     if(nombresern.test(txtname.value)){
@@ -37,5 +37,4 @@ btnEnviar.addEventListener("click", function(event){
         alertValidaciones.style.display="block";
         console.log("Este no es un telefono correcto");
     }
-
     });
