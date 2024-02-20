@@ -17,42 +17,71 @@
   font-weight: 400;
   src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
 }
+.containerAjo{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E1B866;
+}
 .container{
   padding: 20px;
   margin-top: 10px;
   background-color: #E1B866;
 }
-.mb-3, .form-label{
+.mb-3, .form-label, h1, h4, h5{
   background-color: #E1B866;
+}
+.navbarBgColor{
+    background-color: #BD5532;
+}
+.containerAjo{
+    display: flex;
+    justify-content: center;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+.footerItem2{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.footerItem3{
+    margin-top: 18px;
 }
 </style>
 <body>
     <!-- Menu de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #BD5532;">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Ajo de Bruja</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar-dark navbarBgColor">
+      <div class="container-fluid navbarBgColor">
+        <a class="navbar-brand navbarBgColor" href="#">Ajo de Bruja</a>
+        <button class="navbar-toggler navbarBgColor" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse navbarBgColor" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link active navbarBgColor" aria-current="page" href="#">Inicio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Nosotros</a>
+              <a class="nav-link active navbarBgColor" aria-current="page" href="#">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Contacto</a>
+              <a class="nav-link active navbarBgColor" aria-current="page" href="#">Contacto</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Productos</a>
+              <a class="nav-link active navbarBgColor" aria-current="page" href="#">Productos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Cuenta</a>
+              <a class="nav-link active navbarBgColor" aria-current="page" href="#">Cuenta</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Formulario</a>
+              <a class="nav-link active navbarBgColor" aria-current="page" href="#">Formulario</a>
             </li>
           </ul>
           <form class="d-flex" role="search">
@@ -62,6 +91,11 @@
         </div>
       </div>
     </nav>
+    <div class="containerAjo">
+        <h1>Ajo de Bruja</h1>
+        <h4>Email: ajodebruja@outlook.com</h4>
+        <h5>Teléfonos: 5545231209 y 5573261445</h5>
+    
       <div class="container border border-info-subtle border-5">
         <div class="alert alert-danger fade show" style="display:none;"
             role="alert" id="alertValidaciones">
@@ -78,8 +112,8 @@
                     <input placeholder="Ingrese su correo Electrónico" class="form-control" type="email" id="email" name="email" required>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label " for="number ">Teléfono</label>
-                    <input placeholder="Ingrese su telefono de Contacto" class="form-control " type="number" id="telefono" name="telefono" minlength="10" required>
+                    <label class="form-label" for="telefono">Teléfono</label>
+                    <input placeholder="Ingrese su teléfono de contacto" class="form-control" type="text" id="telefono" name="telefono" inputmode="numeric" maxlength="10" required>
                 </div>
                 <div class="mb-3">
                     <label class="form-label " for="message ">Mensaje</label>
@@ -88,13 +122,15 @@
                 <button type="submit" class="btn btn-primary" name ="btnEnviar" id="btnEnviar">Enviar</button>
         </form>
     </div>
+</div>
     <script src="../js/Contacto.js"></script>
     <footer>
       <hr>    
-      <a href="https://www.instagram.com/_ajodebruja_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img src="../src/img/insta.png" width="100px" height="100px"></a>
-      <a href="https://www.facebook.com/profile.php?id=100043574392743"><img src="../src/img/face.png" width="100px" height="100px"></a>
+      <a class="footerItem1" href="https://www.instagram.com/_ajodebruja_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="../src/img/insta.png" width="30px" height="30px"></a>
+      <a class="footerItem2" href="https://www.facebook.com/profile.php?id=100043574392743" target="_blank"><img src="../src/img/face.png" width="30px" height="30px"></a>
+      <a class="footerItem2" href="https://wa.me/qr/KTBJWML3Y6GRA1" target="_blank"><img src="../src/img/icons/whatsapp (1).png" width="30px" height="30px"></a>
       </div>
-      <p class="corporation">© Ajo de Bruja | All Rights Reserved</p>
+      <p class="corporation footerItem3">© Ajo de Bruja | All Rights Reserved</p>
     </footer>
 </body>
 </html>
