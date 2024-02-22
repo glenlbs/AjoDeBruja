@@ -13,6 +13,9 @@ li > a{
 p{
     text-align: justify;
 }
+.navbarBgColor{
+    background-color: #BD5532;
+}
 .card{
     background-color: #e1b866;
 }

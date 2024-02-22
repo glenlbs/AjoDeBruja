@@ -15,7 +15,7 @@ html *{
   .container{
     padding: 20px;
     margin-top: 10px;
-    background-color: #E1B866;
+    background-color: #73C8A9; /*container y from*/
   }
   .mb-3, .form-label, h1, h4, h5{
     background-color: #E1B866;
@@ -26,6 +26,9 @@ html *{
   .containerAjo{
       display: flex;
       justify-content: center;
+  }
+  form{
+    background-color: #E1B866;
   }
   footer {
     display: flex;
