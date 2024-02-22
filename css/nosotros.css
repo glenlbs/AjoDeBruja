@@ -4,7 +4,6 @@ html *{
     font-weight: 400;
     src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
 }
-
 body{
     background-color: #dee1b6;
 }
@@ -20,7 +19,7 @@ p{
 hr {
     height: 10px;
     background-color: #373B44;
-    }
+}
 .containervn {
 display: flex;
 align-items: center;
@@ -36,51 +35,24 @@ padding-left: 20px;
     margin-right: auto;
     width: 50%;
 }
-/*Telefono*/
-.navi{
-    display: grid;
-    gap: 10px;
-    grid-template-areas: 
-    "face"
-    "insta"
-    "tiktok";
+.navbarBgColor{
+    background-color: #BD5532;
 }
-.navi2{
-    display: grid;
-    gap: 10px;
-    grid-template-areas: 
-    "inicio"
-    "contacto";
-}
-td.fitwidth{ width:1px}
-/*Tablet*/
-@media(max-width:1024px) and (min-width:900px){
-    .navi{
-        grid-template-columns: auto;
-        grid-template-areas: 
-        "face insta"
-        "tiktok tiktok";
-    }
-    .navi2{
-        grid-template-columns: auto;
-        grid-template-areas: 
-        "inicio inicio"
-        "contacto contacto";
-    }
-}
-/*Desktop*/
-@media(min-width:900px){
-    .navi{
-        grid-template-columns: auto;
-        grid-template-areas: 
-        "face insta tiktok";
-    }
-    .navi2{
-        grid-template-columns: auto;
-        grid-template-areas: 
-        "inicio contacto";
-    }
-}
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .footerItem2{
+      margin-left: 5px;
+      margin-right: 5px;
+  }
+  .footerItem3{
+      margin-top: 18px;
+  }
 /*Animation*/
 .fading{
 animation: fadeInAnimation ease 3s;
