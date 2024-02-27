@@ -70,14 +70,3 @@ agregarElemento({
     'img': 'https://i.imgur.com/zG8uvf7.png',
     'descripcion': 'Sal de origen natural rica en minerales.'
 })
-
-agregarElemento({
-    'nombre': 'XX',
-    'img': 'https://www.sampieri.com.mx/wp-content/uploads/2020/04/CERVEZA-XX-LAGER-LATA-473-ml..jpg',
-    'descripcion': 'Cerveza clara'
-})
-agregarElemento({
-    'nombre': 'Doritos',
-    'img': 'https://farmaciacalderon.com/cdn/shop/products/7501011131064_580x.png?v=1605548633',
-    'descripcion': 'Papas sabor a queso y chile'
-})
