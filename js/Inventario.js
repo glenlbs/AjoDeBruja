@@ -12,22 +12,42 @@ function agregarElemento(item){
     contenedorElemens.innerHTML += elementoHTML;
 }
 
-agregarElemento({'nombre':'jugo',
-    'img':'https://www.gs1india.org/media/Juice_pack.jpg',
-    'descripcion':'Jugo de naranja, fresco y delicioso'});
+agregarElemento({'nombre':'Cafe Verde',
+'img':'https://i.imgur.com/H24o1P9.png',
+    'descripcion':'Cafe que mantiene sus caracteristicas al no estar tostado y esto tiene muchos beneficios para la salud.'});
 
-agregarElemento({'nombre':'Tayto',
-    'img':'https://www.irishtimes.com/polopoly_fs/1.4078148!/image/image.jpg',
-    'descripcion':'Papas de queso y ajo'})
+agregarElemento({'nombre':'Crema de Almendras',
+    'img':'https://i.imgur.com/YcyulaU.png',
+    'descripcion':'Contiene almendras finamente molidas.'})
 
-agregarElemento({'nombre':'Coca',
-    'img':'https://d1zc67o3u1epb0.cloudfront.net/media/catalog/product/5/5/559.jpg?width=265&height=390&store=default&image-type=image',
-    'descripcion':'Refresco sabor a cola.'})
+agregarElemento({'nombre':'Crema de Cacahuate',
+    'img':'https://i.imgur.com/RPcNKBl.png',
+    'descripcion':'Delicioso y muy versatil que ofrece varios beneficios  a la salud.'})
 
-agregarElemento({'nombre':'XX',
-    'img':'https://www.sampieri.com.mx/wp-content/uploads/2020/04/CERVEZA-XX-LAGER-LATA-473-ml..jpg',
-    'descripcion':'Cerveza clara'})
-agregarElemento({'nombre':'Doritos',
-    'img':'https://farmaciacalderon.com/cdn/shop/products/7501011131064_580x.png?v=1605548633',
-    'descripcion':'Papas sabor a queso y chile'})
+agregarElemento({'nombre':'Golden Milk',
+    'img':'https://i.imgur.com/hbxHCzH.png',
+    'descripcion':'Bebida reconfortante con raices en la medicina ayurvética.'})
+agregarElemento({'nombre':'Granola',
+    'img':'https://i.imgur.com/B1XbQwV.png',
+    'descripcion':'Esta compuesta principalmente de avena, frutos secos, semillas y miel.'})
+
+    
+agregarElemento({'nombre':'Jabones',
+'img':'https://i.imgur.com/RbSpWGl.png',
+    'descripcion':'Exelente opcion para el cuidado de la piel, echos con ingredientes naturales.'});
+
+agregarElemento({'nombre':'Jarabe de Agave',
+    'img':'https://i.imgur.com/vpXV3IP.png',
+    'descripcion':'Es un endulzante extraído 100% de agaves azules mexicanos, de bajo índice glucémico.'})
+
+agregarElemento({'nombre':'Te Matcha',
+    'img':'https://i.imgur.com/8pWc87P.png',
+    'descripcion':'Aprovecha todos los beneficios del té verde matcha, ya sea con agua, leche, café; hasta incluirlo en repostería.'})
+
+agregarElemento({'nombre':'Mermelada',
+    'img':'https://i.imgur.com/fBDrSYF.png',
+    'descripcion':'Memelada echa con fruta natural.'})
+agregarElemento({'nombre':'Sal Artesanal',
+    'img':'https://i.imgur.com/zG8uvf7.png',
+    'descripcion':'Sal de origen natural rica en minerales.'})
 
