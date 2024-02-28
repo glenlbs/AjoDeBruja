@@ -15,9 +15,11 @@ html * {
 }
 
 .container {
+    margin: 20px auto;
     padding: 20px;
     margin-top: 10px;
-    background-color: #E1B866;
+    background-color: #DEE1B6;
+    justify-content: center;
 }
 
 .mb-3,
@@ -71,10 +73,6 @@ footer {
     background-color: #73C8A9;
 }
 
-.container {
-    margin: 20px auto;
-}
-
 .card {
     background-color: #73C8A9;
     margin-bottom: 10px;
@@ -115,7 +113,25 @@ img {
     display: flex;
     flex-direction: column;
 }
-
 .card-description {
     flex-grow: 1;
+}
+.containerFiltros{
+    margin-left: 100px;
+}
+.card-img-top{
+    height: 280px;
+    width: 278px;
+    border-radius: 2%;
+    margin-top: 2px;
+    background-color: #DEE1B6;
+}
+.card-title{
+    display: flex;
+    justify-content: center;
+    background-color: #73C8A9;
+    font-weight: bold;
+}
+.card-text{
+    background-color: #73C8A9;
 }

@@ -13,60 +13,57 @@ function agregarElemento(item) {
 }
 
 agregarElemento({
-    'nombre': 'Cafe Verde',
-    'img': 'https://i.imgur.com/H24o1P9.png',
-    'descripcion': 'Cafe que mantiene sus caracteristicas al no estar tostado y esto tiene muchos beneficios para la salud.'
+    'nombre': 'Cacao en Polvo',
+    'img': '../src/inv/ADB_CacaoPolvo.png',
+    'descripcion': 'Cacao orgánico en polvo sin azúcar, colorantes ni conservadores.'
 });
-
+agregarElemento({
+    'nombre': 'Café Verde',
+    'img': '../src/inv/ADB_CafeVerde.png',
+    'descripcion': 'Granos de café sin tostar, para el óptimo aprovechamiento de sus propiedades.'
+});
 agregarElemento({
     'nombre': 'Crema de Almendras',
-    'img': 'https://i.imgur.com/YcyulaU.png',
-    'descripcion': 'Contiene almendras finamente molidas.'
-})
-
+    'img': '../src/inv/ADB_CAlmendra.png',
+    'descripcion': 'Crema de almendras naturales, libre de aceites, azúcar, colorantes y conservadores.'
+});
 agregarElemento({
     'nombre': 'Crema de Cacahuate',
-    'img': 'https://i.imgur.com/RPcNKBl.png',
-    'descripcion': 'Delicioso y muy versatil que ofrece varios beneficios  a la salud.'
-})
-
+    'img': '../src/inv/ADB_CCacahuate1.png',
+    'descripcion': 'Crema de cacahuate tostado natural, libre de aceites, azúcar, colorantes y conservadores.'
+});
 agregarElemento({
     'nombre': 'Golden Milk',
-    'img': 'https://i.imgur.com/hbxHCzH.png',
-    'descripcion': 'Bebida reconfortante con raices en la medicina ayurvética.'
-})
+    'img': '../src/inv/ADB_GoldenMilk.png',
+    'descripcion': 'Bebida reconfortante a base de cúrcuma, jengibre y otras especias, antioxidante y antiinflamatorio natural.'
+});
 agregarElemento({
     'nombre': 'Granola',
-    'img': 'https://i.imgur.com/B1XbQwV.png',
-    'descripcion': 'Esta compuesta principalmente de avena, frutos secos, semillas y miel.'
-})
-
-
-agregarElemento({
-    'nombre': 'Jabones',
-    'img': 'https://i.imgur.com/RbSpWGl.png',
-    'descripcion': 'Exelente opcion para el cuidado de la piel, echos con ingredientes naturales.'
+    'img': '../src/inv/ADB_Granola.png',
+    'descripcion': 'Mezcla casera de de avena, frutos secos, semillas y miel.'
 });
-
+agregarElemento({
+    'nombre': 'Jabones Artesanales',
+    'img': '../src/inv/ADB_Jabones.png',
+    'descripcion': 'Excelente opcion para el cuidado de la piel, hechos con ingredientes naturales.'
+});
 agregarElemento({
     'nombre': 'Jarabe de Agave',
-    'img': 'https://i.imgur.com/vpXV3IP.png',
-    'descripcion': 'Es un endulzante extraído 100% de agaves azules mexicanos, de bajo índice glucémico.'
-})
-
+    'img': '../src/inv/ADB_JarabeAgave.png',
+    'descripcion': 'Endulzante extraído 100% de agaves azules mexicanos, de bajo índice glucémico.'
+});
 agregarElemento({
-    'nombre': 'Te Matcha',
-    'img': 'https://i.imgur.com/8pWc87P.png',
-    'descripcion': 'Aprovecha todos los beneficios del té verde matcha, ya sea con agua, leche, café; hasta incluirlo en repostería.'
-})
-
+    'nombre': 'Té Matcha',
+    'img': '../src/inv/ADB_Matcha.png',
+    'descripcion': 'Té verde japonés con propiedades antioxidantes, listo para preparar en agua, leche, café o repostería.'
+});
 agregarElemento({
     'nombre': 'Mermelada',
-    'img': 'https://i.imgur.com/fBDrSYF.png',
-    'descripcion': 'Memelada echa con fruta natural.'
-})
+    'img': '../src/inv/ADB_Mermelada3.png',
+    'descripcion': 'Memelada artesanal, hecha con fruta natural de temporada.'
+});
 agregarElemento({
-    'nombre': 'Sal Artesanal',
-    'img': 'https://i.imgur.com/zG8uvf7.png',
-    'descripcion': 'Sal de origen natural rica en minerales.'
-})
+    'nombre': 'Sal Gourmet Artesanal',
+    'img': '../src/inv/ADB_SalArtesanal.png',
+    'descripcion': 'Sal de mesa en grano de origen natural, rica en minerales. Sabor albahaca o vino tinto.'
+});
