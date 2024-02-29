@@ -11,6 +11,7 @@ btnEnviar.addEventListener("click", function(event){
     let pattern = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");
     let telefonoern = new RegExp("^(?!0{10}$)[0-9]{10}$");
     let nombresern = new RegExp("^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$");
+    let messageern = new RegExp("^(?=.*[a-zA-Z0-9]).{3,100}$");
     alertValidacionesTexto.innerHTML="";
     alertValidaciones.style.display="none";
     if(nombresern.test(txtname.value)){
@@ -30,15 +31,23 @@ btnEnviar.addEventListener("click", function(event){
         alertValidaciones.style.display="block";
     }
     if(telefonoern.test(telefono.value)){
-        console.log("Es un telefono correcto");
+        console.log("Es un Teléfono correcto");
     }else{
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `
-        El <strong> Telefono </strong> no es correcto.<br/>`);
+        El <strong> Teléfono </strong> no es correcto.<br/>`);
         alertValidaciones.style.display="block";
-        console.log("Este no es un telefono correcto");
+        console.log("Este no es un Teléfono correcto");
+    }
+    if(messageern.test(txtmessage.value)){
+        console.log("Es un mensaje correcto");
+    }else{
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `
+        El <strong> mensaje </strong> no es correcto.<br/>`);
+        alertValidaciones.style.display="block";
+        console.log("Este no es un mensaje correcto");
     }
 
-    if(nombresern.test(txtname.value)==true && pattern.test(txtemail.value) && telefonoern.test(telefono.value)){
+    if(nombresern.test(txtname.value)==true && pattern.test(txtemail.value) && telefonoern.test(telefono.value) && messageern.test(txtmessage.value)){
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `
         Gracias por contactarnos.<br/>`);
         alertValidaciones.style.display="block";
@@ -60,10 +69,10 @@ btnEnviar.addEventListener("click", function(event){
         var serviceID = "service_suoyq8b"; /// Email Service ID
         var templateID = "template_6a6ay6j"; /// Email Template ID
         emailjs.send(serviceID, templateID, params)
-        .then(res=>{
-            alert("Enviado correctamente");
-        })
-        .catch(err => console.error('Error al enviar el correo: ', err));
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `
+        El correo se envio correctamente.<br/>`);
+        alertValidaciones.style.display="block";
+        console.log("El correo se envio correctamente");
     }
 
 //Pruebas
