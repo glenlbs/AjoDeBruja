@@ -1,5 +1,6 @@
- 
- document.querySelector('form').addEventListener('submit', function(event) {
+let btnAgregar = document.getElementById("btnAgregar");
+
+btnAgregar.addEventListener("click", function(event){
     event.preventDefault(); // Evita que el formulario se envíe automáticamente
 
     // Captura los valores del formulario
@@ -10,10 +11,10 @@
 
     // Crea un objeto JSON con los valores capturados
     var producto = {
-      "Nombre": nombre,
-      "Imagen": imagen,
-      "Descripción": descripcion,
-      "Precio": precio
+      "nombre": nombre,
+      "img": imagen,
+      "descripcion": descripcion,
+      "precio": precio
     };
 
     // Convierte el objeto JSON a una cadena JSON
