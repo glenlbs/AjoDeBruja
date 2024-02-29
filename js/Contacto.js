@@ -9,8 +9,8 @@ let alertValidaciones = document.getElementById("alertValidaciones");
 btnEnviar.addEventListener("click", function(event){
     event.preventDefault();
     let pattern = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");
-    let telefonoern = new RegExp("[0-9]{10}");
-    let nombresern = new RegExp("^[A-Za-z]{4,10}$");
+    let telefonoern = new RegExp("^(?!0{10}$)[0-9]{10}$");
+    let nombresern = new RegExp("^[\p{L}\s']+$/u");
     alertValidacionesTexto.innerHTML="";
     alertValidaciones.style.display="none";
     if(nombresern.test(txtname.value)){
