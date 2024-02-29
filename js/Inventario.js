@@ -13,6 +13,17 @@ function agregarElemento(item) {
     contenedorElemens.innerHTML += elementoHTML;
 }
 
+function cargarInventarioDesdeLocalStorage() {
+    var productoJSON = localStorage.getItem('producto');
+    if (productoJSON) {
+        var producto = JSON.parse(productoJSON);
+        agregarElemento(producto);
+    }
+}
+window.onload = function() {
+    cargarInventarioDesdeLocalStorage();
+};
+
 agregarElemento({
     'nombre': 'Cacao en Polvo',
     'img': '../src/inv/ADB_CacaoPolvo.png',
