@@ -10,7 +10,7 @@ btnEnviar.addEventListener("click", function(event){
     event.preventDefault();
     let pattern = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");
     let telefonoern = new RegExp("^(?!0{10}$)[0-9]{10}$");
-    let nombresern = new RegExp("^[\p{L}\s']+$/u");
+    let nombresern = new RegExp("^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$");
     alertValidacionesTexto.innerHTML="";
     alertValidaciones.style.display="none";
     if(nombresern.test(txtname.value)){
@@ -37,4 +37,24 @@ btnEnviar.addEventListener("click", function(event){
         alertValidaciones.style.display="block";
         console.log("Este no es un telefono correcto");
     }
+
+    if(nombresern.test(txtname.value)==true && pattern.test(txtemail.value) && telefonoern.test(telefono.value)){
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", `
+        Gracias por contactarnos.<br/>`);
+        alertValidaciones.style.display="block";
+    }
+
     });
+
+//Pruebas
+//let ExpRegNomApe="^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$";
+ 
+//let NomApeValido="Joel Francisco Gómez Castro";//Cadena de Nombres y Apellidos
+//let NomApeinvalido="10 Morales";//Cadena de Nombres y Apellidos
+     
+//Evaluación de Cadena Valida de Nombres y Apellidos
+// if(NomApeValido.match(ExpRegNomApe)!=null){
+//     console.log("Nombres y Apellidos Válido");
+// }else{
+//     console.log("Nombres y Apellidos Invalido");
+// }
