@@ -42,9 +42,29 @@ btnEnviar.addEventListener("click", function(event){
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `
         Gracias por contactarnos.<br/>`);
         alertValidaciones.style.display="block";
+        sendMail();
     }
 
     });
+
+    function sendMail() {
+        (function() {
+            emailjs.init("NuzuoTIw9_09mAdgG"); // ID EmailJS
+        })();
+        var params = {
+            txtname: document.getElementById("name").value,
+            txtemail: document.getElementById("email").value,
+            telefono: document.getElementById("telefono").value,
+            txtmessage: document.getElementById("message").value,
+        };
+        var serviceID = "service_suoyq8b"; /// Email Service ID
+        var templateID = "template_6a6ay6j"; /// Email Template ID
+        emailjs.send(serviceID, templateID, params)
+        .then(res=>{
+            alert("Enviado correctamente");
+        })
+        .catch(err => console.error('Error al enviar el correo: ', err));
+    }
 
 //Pruebas
 //let ExpRegNomApe="^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$";
