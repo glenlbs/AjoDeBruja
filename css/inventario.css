@@ -117,7 +117,9 @@ img {
     flex-grow: 1;
 }
 .containerFiltros{
-    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 .card-img-top{
     height: 280px;
@@ -134,4 +136,7 @@ img {
 }
 .card-text{
     background-color: #73C8A9;
+}
+.dropdown1, .dropdown2{
+    margin-right: 10px;
 }

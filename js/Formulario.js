@@ -41,7 +41,7 @@ btnAgregar.addEventListener("click", function(event){
             "nombre": nombre,
             "img": imagen,
             "descripcion": descripcion,
-            "precio": precio
+            "precio": "$"+precio+".00"
         };
     
         // Convierte el objeto JSON a una cadena JSON
@@ -52,11 +52,11 @@ btnAgregar.addEventListener("click", function(event){
         // Puedes almacenar el JSON en una variable, enviarlo a través de una solicitud HTTP, etc.
         console.log(productoJSON); // Muestra el JSON en la consola para propósitos de depuración
 
-        Swal.fire("Producto añadido correctamente")
+        Swal.fire("Producto añadido correctamente");
     }else{
         Swal.fire({
-            icon: "error",
-            title: "No se agregó el producto",
+            icon: "Error.",
+            title: "No se agregó el producto.",
             text: "Vuelve a intentarlo.",
           });
     }

@@ -74,24 +74,28 @@
     </main>
     <!--Filtros de categoría-->
     <div class="containerFiltros">
-    <div>
-        <label for="precio">Precio:</label>
-        <select id="precio" name="precio">
-          <option value="50-100">$50 - $100</option>
-          <option value="100-200">$100 - $200</option>
-          <option value="200+">Más de $200</option>
-        </select>
-      </div>
+        <div class="dropdown1">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categoría
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Comestibles</a></li>
+              <li><a class="dropdown-item" href="#">Veganos</a></li>
+              <li><a class="dropdown-item" href="#">Cuidado Personal</a></li>
+            </ul>
+          </div>
+          <div class="dropdown2">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Rango de precios
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">$50-$100</a></li>
+              <li><a class="dropdown-item" href="#">$100-$200</a></li>
+              <li><a class="dropdown-item" href="#">+$200</a></li>
+            </ul>
+          </div>
       <div>
-        <label for="categoria">Categoría:</label>
-        <select id="categoria" name="categoria">
-          <option value="comestibles">Comestibles</option>
-          <option value="veganos">Veganos</option>
-          <option value="cuidado-personal">Cuidado Personal</option>
-        </select>
-      </div>
-      <div>
-      <button type="button" class="btn btn-success btn-sm" id="aplicarFiltros">Aplicar filtros</button>
+        <button type="button" class="btn btn-success dropdown3">Filtrar</button>
     </div>
     
     <div id="productos">
