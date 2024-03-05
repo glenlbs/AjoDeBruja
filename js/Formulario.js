@@ -36,13 +36,15 @@ btnAgregar.addEventListener("click", function(event){
     }
 
     if(nombresern.test(nombre)==true && descripcionern.test(descripcion)==true && precioern.test(precio)==true && imagenern.test(imagen)==true){
-    // Crea un objeto JSON con los valores capturados
+        var productos = JSON.parse(localStorage.getItem('productos')) || [];
+        // Crea un objeto JSON con los valores capturados
         var producto = {
             "nombre": nombre,
             "img": imagen,
             "descripcion": descripcion,
             "precio": "$"+precio+".00"
         };
+        productos.push(producto);
     
         // Convierte el objeto JSON a una cadena JSON
         var productoJSON = JSON.stringify(producto);

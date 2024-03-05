@@ -12,19 +12,25 @@
 </head>
 
 <body>
-
-    <form method="post"class="form-box animated fadeInUp">
+    <main>
+    <div class="container border border-info-subtle border-5">
+        <div class="alert alert-danger fade show" style="display:none;"
+            role="alert" id="alertValidaciones">
+          <p id="alertValidacionesTexto"></p>
+        </div>
+    <form method="post"class="form-box animated fadeInUp" id="Registro">
         <h1 class="form-title"> Ingresar</h1>
-        <input type="text" placeholder="Nombre Completo" name="usuario">
-        <input type="int" placeholder="Teléfono" name="telefono">
-        <input type="text" placeholder="email" name="usuario">
-        <input type="password" placeholder="contraseña" name="contraseña">
+        <input type="text" placeholder="Nombre Completo" name="usuario" id="user">
+        <input type="int" placeholder="Teléfono" name="telefono" id="telefono">
+        <input type="text" placeholder="email" name="email" id="email">
+        <input type="password" placeholder="contraseña" name="contraseña" id="contrasena">
         <input type="password" placeholder="confirmar contraseña" name="contraseña">
 
-        <button type="submit" value="ingresar">login </button>
-
+        <button type="submit" value="ingresar" id="btnAgregar">login </button>
+    </main>
 
     </form>
+    <script src="../js/Usuario.js"></script>
 </body>
 
 </html>
