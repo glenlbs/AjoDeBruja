@@ -1,0 +1,80 @@
+body,
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0%;
+    padding: 0%;
+    background: url(../src/img/Logo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.form-box {
+    width: 300px;
+    padding: 40px;
+    background: #191919c4;
+    text-align: center;
+}
+
+.form-title {
+    color: rgb(238, 238, 238);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.form-box input[type="text"],
+.form-box input[type="password"],
+.form-box button[type="submit"],
+.form-box input[type="int"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    padding: 14px 10px;
+    text-align: center;
+    border: 2PX solid #3742fa;
+    width: 200px;
+    outline: none;
+    color: azure;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.form-box input[type="text"]:focus,
+.form-box input[type="password"]:focus,
+.form-box input[type="int"]:focus
+ {
+    width: 280px;
+    color: rgb(255, 249, 249);
+    border-color: aqua;
+}
+
+.form-box button[type="submit"] {
+    border: 0;
+    background: #3742fa;
+    cursor: pointer;
+    border: 2px solid #3742fa;
+}
+
+.form-box button[type="submit"]:hover {
+    background: none;
+}
+/* Funcion de Alertas PHP
+.bad {
+    text-align: center;
+    width: 100%;
+    padding: 12px;
+    background: url(../img/sellos\ del\ SAT.jpg);
+    background-size: 90%;
+    color: rgb(184, 38, 38);
+}
+*/
