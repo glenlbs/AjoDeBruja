@@ -14,7 +14,9 @@ btnAgregar.addEventListener("click", function(event){
     let pattern = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");
     let nombresern = new RegExp("^[A-ZÑa-zñ0-9áéíóúÁÉÍÓÚ'° ]+$");
     let telefonoern = new RegExp("^(?!^[0-4]{10}$)[0-9]{10,10}$");
-    let contrasenaern = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z0-9@$!%*?&]{8,}$");
+    let contrasenaern = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\u0021-\u002b\u003c-\u0040])[A-Za-z0-9\u0021-\u002b\u003c-\u0040]{8,}$");
+    //\u0021-\u002b\u003c-\u0040
+    //let contrasenaern = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z0-9@$!%*?&]{8,}$")
     
     if(nombresern.test(nombre)){
         console.log("Es un nombre correcto");
@@ -72,9 +74,9 @@ btnAgregar.addEventListener("click", function(event){
     // Limpiar el formulario después de guardar los datos
     form.reset();
 
-    alertValidacionesTexto.insertAdjacentHTML("beforeend", `
-       Gracias por contactarnos.<br/>`);
-       alertValidaciones.style.display="block";
+    // alertValidacionesTexto.insertAdjacentHTML("beforeend", `
+    //    Gracias por contactarnos.<br/>`);
+    //    alertValidaciones.style.display="block";
 
     // Puedes redirigir a otra página aquí si lo deseas
     }else{
