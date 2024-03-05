@@ -13,9 +13,54 @@ li > a{
 p{
     text-align: justify;
 }
+.Titulo{
+    font-family: "Meddon", cursive;
+    font-weight: 400;
+}
+.row {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease-in-out;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .row:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .fading {
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .fading:hover {
+    opacity: 0.7;
+  }
+.Titulo2{
+    font-family: "Meddon", cursive;
+    font-weight: 100;
+}
+.cardLink{
+    display: inline-block;
+    margin: 0 10px;
+    height: 35px;
+    width: 35px;
+    transition: transform 0.3s ease-in-out;
+}
+.cardLink:hover{
+    transform: scale(1.2);
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+  }
 .navbarBgColor{
     background-color: #BD5532;
 }
+
 .card{
     background-color: #e1b866;
     margin-bottom: 10px;
@@ -41,25 +86,27 @@ p{
 }
 
 .card-body {
-    background-color: #73C8A9;
-    padding: 20px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #DEE1B6;
+    padding: 15px 10px;
     text-align: justify;
     font-weight: 400;
     font-size: large;
     margin: 15px 10px 15px 10px;
-
 }
-
 img {
     width: 100%;
     display: block;
 }
-
 .card:hover{
-    color: white;
+    color: rgb(0, 0, 0);
     background-color: #1b1b32;
 }
-
+.card-body:hover{
+    background-color: #73C8A9;
+}
 hr {
     height: 10px;
     background-color: #373B44;
