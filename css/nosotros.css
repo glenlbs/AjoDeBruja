@@ -18,10 +18,56 @@ p{
 }
 .card{
     background-color: #e1b866;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
 }
+.card-title{
+    text-align: center;
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-size:x-large;
+    margin-bottom: 10px;
+}
+
+.card-img-top{
+    height: 280px;
+    width: 278px;
+    border-radius: 2%;
+    margin-top: 2px;
+    background-color: #DEE1B6;
+}
+
+.card-body {
+    background-color: #73C8A9;
+    padding: 20px 15px;
+    text-align: justify;
+    font-weight: 400;
+    font-size: large;
+    margin: 15px 10px 15px 10px;
+
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.card:hover{
+    color: white;
+    background-color: #1b1b32;
+}
+
 hr {
     height: 10px;
     background-color: #373B44;
+}
+
+.btnbuscar{
+    background-color: #e1b866;
+    color: white;
 }
 .containervn {
 display: flex;
@@ -56,6 +102,21 @@ footer {
   .footerItem3{
       margin-top: 18px;
   }
+
+  .Titulo{
+    font-weight: 700;
+    font-size:xx-large;
+    margin-top: 15px;
+    margin-block: 50px;
+  }
+
+  *h2{
+    font-weight: 400;
+    font-size:large;
+    margin-top: 15px;
+    margin-block: 50px;
+  }
+
 /*Animation*/
 .fading{
 animation: fadeInAnimation ease 3s;
