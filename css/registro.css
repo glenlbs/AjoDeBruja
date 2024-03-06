@@ -1,12 +1,13 @@
-body,
-html {
-    height: 100%;
-}
-
+html *{
+    background-color: #DEE1B6;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+  }
 body {
     margin: 0%;
     padding: 0%;
-    background: url(../src/img/Logo.png);
     background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
@@ -23,7 +24,10 @@ body {
     background: #191919c4;
     text-align: center;
 }
-
+.Titulo{
+    font-family: "Meddon", cursive;
+    font-weight: 400;
+}
 .form-title {
     color: rgb(238, 238, 238);
     text-transform: uppercase;

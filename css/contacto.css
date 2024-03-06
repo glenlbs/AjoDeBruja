@@ -5,23 +5,32 @@ html *{
     font-weight: 400;
     src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
   }
+  .Titulo{
+    font-family: "Meddon", cursive;
+    font-weight: 400;
+  }
   .containerAjo{
       margin: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       background-color: #E1B866;
+      border-radius: 30px;
   }
   .container{
     padding: 20px;
     margin-top: 10px;
     background-color: #73C8A9; /*container y from*/
+    border-radius: 20px;
   }
   .mb-3, .form-label, h1, h4, h5{
     background-color: #E1B866;
   }
   .navbarBgColor{
       background-color: #BD5532;
+  }
+  .btn2{
+    color: white;
   }
   .containerAjo{
       display: flex;
