@@ -9,22 +9,14 @@ html *{
     font-family: "Meddon", cursive;
     font-weight: 400;
   }
-  .containerAjo{
-      margin: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background-color: #E1B866;
-      border-radius: 30px;
-  }
-  .container{
+  .formContainer{
+    display: flex;
+    justify-content: center;
     padding: 20px;
     margin-top: 10px;
-    background-color: #73C8A9; /*container y from*/
+    background-color: #373B44; /*container y from*/
     border-radius: 20px;
-  }
-  .mb-3, .form-label, h1, h4, h5{
-    background-color: #E1B866;
+    width: 500px;
   }
   .navbarBgColor{
       background-color: #BD5532;
@@ -32,10 +24,7 @@ html *{
   .btn2{
     color: white;
   }
-  .containerAjo{
-      display: flex;
-      justify-content: center;
-  }
+
   form{
     background-color: #E1B866;
   }
@@ -67,36 +56,29 @@ html *{
 .btn{
 color:white;
 border-color: #73C8A9;
-
 }
-
 body {
     margin: 0%;
     padding: 0%;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
 }
 
 .form-box {
-    width: 300px;
+    width: 500px;
     padding: 40px;
-    background: #191919c4;
+    background-color: #DEE1B6;
     text-align: center;
+    border-radius: 20px;
 }
 .Titulo{
     font-family: "Meddon", cursive;
     font-weight: 400;
 }
 .form-title {
-    color: rgb(238, 238, 238);
+    color: #73C8A9;
     text-transform: uppercase;
     font-weight: 500;
+    background-color: #373B44;
+    border-radius: 10px;
 }
 
 .form-box input[type="text"],
@@ -124,18 +106,18 @@ body {
  {
     width: 280px;
     color: rgb(255, 249, 249);
-    border-color: aqua;
+    border-color: #373B44;
 }
 
 .form-box button[type="submit"] {
     border: 0;
-    background: #3742fa;
+    background-color: #BD5532;
     cursor: pointer;
     border: 2px solid #3742fa;
 }
 
 .form-box button[type="submit"]:hover {
-    background: none;
+    background-color: #3742fa;
 }
 /* Funcion de Alertas PHP
 .bad {

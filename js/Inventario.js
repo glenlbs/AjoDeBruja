@@ -85,8 +85,32 @@ agregarElemento({
     'precio': '$100.00'
 });
 agregarElemento({
-    'nombre': 'Sal Gourmet Artesanal',
-    'img': '../src/inv/ADB_SalArtesanal.png',
-    'descripcion': 'Sal de mesa en grano de origen natural, rica en minerales. Sabor albahaca o vino tinto.<br/> Presentación: 150g.',
-    'precio': '$80.00'
+    'nombre': 'Vitamina B-12 Vegana',
+    'img': '../src/inv/ADB_B12Veg.png',
+    'descripcion': 'Vitamina B-12 Cianocobalamina con antioxidante.<br/> Contenido: 30 cápsulas de 500mg.',
+    'precio': '$250.00'
+});
+agregarElemento({
+    'nombre': 'Bebida de Almendras',
+    'img': '../src/inv/ADB_BebidAlmendras.png',
+    'descripcion': 'Bebida en polvo para preparar lechada de almendras.<br/> Contenido: 450g.',
+    'precio': '$250.00'
+});
+agregarElemento({
+    'nombre': 'Cepillos dentales de bambú',
+    'img': '../src/inv/ADB_CepilloBambu.png',
+    'descripcion': 'Cepillos dentales de bambú, 100% biodegradables.<br/> Contenido: 5 pz.',
+    'precio': '$65.00'
+});
+agregarElemento({
+    'nombre': 'Crema de Granada',
+    'img': '../src/inv/ADB_CremaGranada.png',
+    'descripcion': 'Crema hidratante de granada, ideal para pieles sensibles.<br/> Contenido: 250 ml.',
+    'precio': '$220.00'
+});
+agregarElemento({
+    'nombre': 'Hidrogel de Aloe Vera',
+    'img': '../src/inv/ADB_AloeVera.png',
+    'descripcion': 'Hidrogel de Aloe Vera facial, hidratante y revitalizante.<br/> Contenido: 30 ml.',
+    'precio': '$180.00'
 });
