@@ -5,6 +5,71 @@ html *{
     font-weight: 400;
     src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
   }
+  .Titulo{
+    font-family: "Meddon", cursive;
+    font-weight: 400;
+  }
+  .containerAjo{
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #E1B866;
+      border-radius: 30px;
+  }
+  .container{
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #73C8A9; /*container y from*/
+    border-radius: 20px;
+  }
+  .mb-3, .form-label, h1, h4, h5{
+    background-color: #E1B866;
+  }
+  .navbarBgColor{
+      background-color: #BD5532;
+  }
+  .btn2{
+    color: white;
+  }
+  .containerAjo{
+      display: flex;
+      justify-content: center;
+  }
+  form{
+    background-color: #E1B866;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .footerItem2{
+      margin-left: 5px;
+      margin-right: 5px;
+  }
+  .footerItem3{
+      margin-top: 18px;
+  }
+.border-info-subtle {
+    border-color: #73C8A9!important;
+}
+.navbar-toggler-icon{
+    background-color: #BD5532;
+}
+.mb-3{
+    background-color: #E1B866;
+}
+
+.btn{
+color:white;
+border-color: #73C8A9;
+
+}
+
 body {
     margin: 0%;
     padding: 0%;
