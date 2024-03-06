@@ -29,7 +29,10 @@ h4,
 h5 {
     background-color: #E1B866;
 }
-
+.Titulo{
+    font-family: "Meddon", cursive;
+    font-weight: 400;
+}
 .navbarBgColor {
     background-color: #BD5532;
 }

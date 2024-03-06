@@ -23,6 +23,9 @@ html *{
   .navbarBgColor{
       background-color: #BD5532;
   }
+  .btn2{
+    color: white;
+  }
   .containerAjo{
       display: flex;
       justify-content: center;
@@ -50,4 +53,49 @@ html *{
 }
 .mb-3{
     background-color: #E1B866;
+}
+.Titulo{
+    font-family: "Meddon", cursive;
+    font-weight: 400;
+}
+.containerGreen {
+    background-color: #73C8A9;
+    border-radius: 10px;
+}
+.vendidos{
+    display: flex;
+    justify-content: center;
+}
+.containerVendidos{
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    background-color: #73C8A9;
+    justify-content: center;
+}
+.card{
+    margin: 8px;
+    margin-top: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #373B44;
+}
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.card-title{
+    display: flex;
+    justify-content: center;
+    background-color: #373B44;
+    font-weight: bold;
+    color: #DEE1B6;
+}
+.card-text{
+    display: flex;
+    text-align: justify;
+}
+.btn, .bi{
+    background-color: #BD5532;
+    display: flex;
+    justify-content: center;
 }

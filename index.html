@@ -9,13 +9,16 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Meddon&family=Open+Sans:wght@700&family=Yantramanav:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="./css/style.css">
   </head>
 <body>
     <!-- Menu de navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark navbarBgColor">
       <div class="container-fluid navbarBgColor">
-        <a class="navbar-brand navbarBgColor" href="./index.html">Ajo de Bruja</a>
+        <a class="navbar-brand navbarBgColor Titulo" href="./index.html">Ajo de Bruja</a>
         <button class="navbar-toggler navbarBgColor" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,11 +45,73 @@
           </ul>
           <form class="d-flex" role="search" style="background-color: #BD5532;">
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit" style="background-color: #BD5532;">Buscar</button>
-          </form>
+            <button class="btn btn-outline-light btn2" type="submit">Buscar</button>
+        </form>
         </div>
       </div>
     </nav>
+    
+    <main class="main container containerGreen">
+      <div id="carouselExample" class="carousel slide">
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="src/img/AjoDeBrujaBannerIndex1 (1).png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                  <img src="src/img/AjoDeBrujaBannerIndex2.png" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                  <img src="src/img/AjoDeBrujaBannerIndex3.png" class="d-block w-100" alt="...">
+              </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="visually-hidden">Previous</span>
+      </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="visually-hidden">Next</span>
+      </button>
+      </div>
+  </main>
+  <br>
+  <h3 class="Titulo vendidos">Productos más vendidos</h3>
+  <div class="containerVendidos">
+    <div class="card" style="width: 18rem;">
+      <img src="src/inv/ADB_B12Veg.png" class="card-img-top" alt="image">
+      <div class="card-body">
+      <h5 class="card-title">Vitamina B-12 Vegana</h5>
+      <p class="card-text">Vitamina B-12 Cianocobalamina con antioxidante. Contenido: 30 cápsulas de 500mg.</p>
+      <p class="card-text">$250.00</p>
+      <a href="#" class="btn btn-primary"><i class="bi bi-cart4"></i></a>
+      </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <img src="src/inv/ADB_Matcha.png" class="card-img-top" alt="image">
+        <div class="card-body">
+        <h5 class="card-title">Té Matcha</h5>
+        <p class="card-text">Té matcha japonés antioxidante natural. Contenido: 50g.</p>
+        <p class="card-text">$150.00</p>
+        <a href="#" class="btn btn-primary"><i class="bi bi-cart4"></i></a>
+        </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+          <img src="src/inv/ADB_GoldenMilk.png" class="card-img-top" alt="image">
+          <div class="card-body">
+          <h5 class="card-title">Golden Milk</h5>
+          <p class="card-text">Mezcla para preparar bebida a base de cúrcuma, jengibre, pimienta y otras especias. Contenido: 100g.</p>
+          <p class="card-text">$120.00</p>
+          <a href="#" class="btn btn-primary"><i class="bi bi-cart4"></i></a>
+          </div>
+          </div>
+          <div class="card" style="width: 18rem;">
+            <img src="src/inv/ADB_CacaoPolvo.png" class="card-img-top" alt="image">
+            <div class="card-body">
+            <h5 class="card-title">Cacao en Polvo</h5>
+            <p class="card-text">Cacao orgánico en polvo sin azúcar, colorantes ni conservadores. Presentación: 150g.</p>
+            <p class="card-text">$100.00</p>
+            <a href="#" class="btn btn-primary"><i class="bi bi-cart4"></i></a>
+            </div>
+            </div>
+  </div>
     <footer>
       <hr>    
       <a class="footerItem1" href="https://www.instagram.com/_ajodebruja_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="./src/img/insta.png" width="30px" height="30px"></a>
@@ -55,5 +120,6 @@
       </div>
       <p class="corporation footerItem3">© Ajo de Bruja | All Rights Reserved</p>
     </footer>
+    <script src="js/index.js"></script>
 </body>
 </html>

@@ -51,16 +51,9 @@ p{
 .cardLink:hover{
     transform: scale(1.2);
 }
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 100;
-  }
 .navbarBgColor{
     background-color: #BD5532;
 }
-
 .card{
     background-color: #e1b866;
     margin-bottom: 10px;
@@ -111,9 +104,7 @@ hr {
     height: 10px;
     background-color: #373B44;
 }
-
-.btnbuscar{
-    background-color: #e1b866;
+.btn-outline-light{
     color: white;
 }
 .containervn {
