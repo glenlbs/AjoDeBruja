@@ -69,3 +69,9 @@ color:white;
 border-color: #73C8A9;
 
 }
+
+.sesion-iniciada {
+  background-color: #BD5532;
+  color:red;
+  font-size: small;
+}
