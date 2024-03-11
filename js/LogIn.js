@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     // Realizar acciones después de iniciar sesión, como redireccionar a otra página
                     // Por ejemplo, window.location.href = "página de inicio.html";
                     Swal.fire('Inicio de sesión exitoso');
+                    window.location.href = "../index.html";
                     break;
                 }
             }
