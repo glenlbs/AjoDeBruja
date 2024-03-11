@@ -5,6 +5,29 @@ html *{
     font-weight: 400;
     src: local('Open Sans Light'), local('OpenSans-Light'), url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff) format('woff');
   }
+  .Titulo{
+    font-family: "Meddon", cursive;
+    font-weight: 400;
+  }
+  .formContainer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 10px;
+    background-color: #373B44; /*container y from*/
+    border-radius: 20px;
+    width: 500px;
+  }
+  .navbarBgColor{
+      background-color: #BD5532;
+  }
+  .btn2{
+    color: white;
+  }
+
+  form{
+    background-color: #E1B866;
+  }
   .containerAjo{
       margin: 20px;
       display: flex;
@@ -51,3 +74,70 @@ html *{
 .mb-3{
     background-color: #E1B866;
 }
+
+.btn{
+    color:white;
+    border-color: #73C8A9;
+    }
+body {
+    margin: 0%;
+    padding: 0%;
+    }
+    
+.form-box {
+    width: 500px;
+    padding: 40px;
+    background-color: #DEE1B6;
+    text-align: center;
+    border-radius: 20px;
+    }
+.Titulo{
+    font-family: "Meddon", cursive;
+    font-weight: 400;
+    }
+.form-title {
+    color: #73C8A9;
+    text-transform: uppercase;
+    font-weight: 500;
+    background-color: #373B44;
+    border-radius: 10px;
+    }
+    
+.form-box input[type="text"],
+.form-box input[type="password"],
+.form-box button[type="submit"],
+.form-box input[type="int"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    padding: 14px 10px;
+    text-align: center;
+    border: 2PX solid #3742fa;
+    width: 200px;
+    outline: none;
+    color: azure;
+    border-radius: 24px;
+    transition: 0.25s;
+    }
+    
+.form-box input[type="text"]:focus,
+.form-box input[type="password"]:focus,
+.form-box input[type="int"]:focus
+{
+    width: 280px;
+    color: rgb(255, 249, 249);
+    border-color: #373B44;
+    }
+    
+.form-box button[type="submit"] {
+    border: 0;
+    background-color: #BD5532;
+    cursor: pointer;
+    border: 2px solid #3742fa;
+    }
+    
+.form-box button[type="submit"]:hover {
+    background-color: #3742fa;
+    }
