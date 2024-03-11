@@ -59,33 +59,34 @@ btnAgregar.addEventListener("click", function(event){
 
     // Verificar si el nombre, correo o número telefónico ya están en uso
     for (var i = 1; i <= totalUsuarios; i++) {
-    var claveUsuario = 'usuario_' + i;
-    var usuarioJSON = localStorage.getItem(claveUsuario);
-    var usuario = JSON.parse(usuarioJSON);
-
-    if (usuario.nombre === nombre) {
-        // El nombre ya está en uso
-        Swal.fire('El nombre ' + nombre + ' ya esta en uso.');
-        console.log('El nombre ya está en uso');
-        // Mostrar mensaje de error
-        return;
-    }
-
-    if (usuario.email === email) {
-        // El correo electrónico ya está en uso
-        Swal.fire('El correo electronico ' + email + ' ya esta en uso.');
-        console.log('El correo electrónico ya está en uso');
-        // Mostrar mensaje de error
-        return;
-    }
-
-    if (usuario.telefono === telefono) {
-        // El número telefónico ya está en uso
-        Swal.fire('El numero telefonico ' + telefono + ' ya esta en uso.');
-        console.log('El número telefónico ya está en uso');
-        // Mostrar mensaje de error
-        return;
-    }
+        var claveUsuario = 'usuario_' + i;
+        var usuarioJSON = localStorage.getItem(claveUsuario);
+    
+        // Verificar si usuarioJSON no es null
+        if (usuarioJSON !== null) {
+            var usuario = JSON.parse(usuarioJSON);
+    
+            if (usuario.nombre === nombre) {
+                // El nombre ya está en uso
+                Swal.fire('El nombre ' + nombre + ' ya está en uso.');
+                console.log('El nombre ya está en uso');
+                return; // Debes eliminar este return
+            }
+    
+            if (usuario.email === email) {
+                // El correo electrónico ya está en uso
+                Swal.fire('El correo electrónico ' + email + ' ya está en uso.');
+                console.log('El correo electrónico ya está en uso');
+                return; // Debes eliminar este return
+            }
+    
+            if (usuario.telefono === telefono) {
+                // El número telefónico ya está en uso
+                Swal.fire('El número telefónico ' + telefono + ' ya está en uso.');
+                console.log('El número telefónico ya está en uso');
+                return; // Debes eliminar este return
+            }
+        }
     }
     if(nombresern.test(nombre)==true && telefonoern.test(telefono)==true && pattern.test(email)==true && contrasenaern.test(contraseña)==true && contraseña == contraseñaDos){
         Swal.fire('Registrado exitosamente el usuario ' + nombre + '.');

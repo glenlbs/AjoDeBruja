@@ -14,12 +14,15 @@ function agregarElemento(item) {
 }
 
 function cargarInventarioDesdeLocalStorage() {
-    var productoJSON = localStorage.getItem('producto');
-    if (productoJSON) {
-        var producto = JSON.parse(productoJSON);
-        agregarElemento(producto);
+    var productosJSON = localStorage.getItem('productos');
+    if (productosJSON) {
+        var productos = JSON.parse(productosJSON);
+        productos.forEach(function(producto) {
+            agregarElemento(producto);
+        });
     }
 }
+
 window.onload = function() {
     cargarInventarioDesdeLocalStorage();
 };

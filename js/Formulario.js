@@ -2,6 +2,7 @@ let btnAgregar = document.getElementById("btnAgregar");
 
 btnAgregar.addEventListener("click", function(event){
     event.preventDefault(); // Evita que el formulario se envíe automáticamente
+    var form = document.getElementById('inventario');
 
     // Captura los valores del formulario
     var nombre = document.getElementById('name').value;
@@ -11,7 +12,7 @@ btnAgregar.addEventListener("click", function(event){
 
     let nombresern = new RegExp("^[A-ZÑa-z0-9ñáéíóúÁÉÍÓÚ'° ]+$");
     let descripcionern = new RegExp("^(?=.*[a-zA-Z0-9]).{3,100}$");
-    let precioern = new RegExp("^(?!0{4}$)[0-9]{1,4}$");
+    let precioern = new RegExp("^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$");
     let imagenern = new RegExp("\.(png|jpg)$");
 
     if(nombresern.test(nombre)){
@@ -42,19 +43,20 @@ btnAgregar.addEventListener("click", function(event){
             "nombre": nombre,
             "img": imagen,
             "descripcion": descripcion,
-            "precio": "$"+precio+".00"
+            "precio": "$" + precio
         };
         productos.push(producto);
     
-        // Convierte el objeto JSON a una cadena JSON
-        var productoJSON = JSON.stringify(producto);
+        // Convierte la lista de objetos a una cadena JSON
+        var productosJSON = JSON.stringify(productos);
     
-        // Guarda el JSON en localStorage
-        localStorage.setItem('producto', productoJSON);
+        // Guarda la lista de objetos en localStorage
+        localStorage.setItem('productos', productosJSON);
         // Puedes almacenar el JSON en una variable, enviarlo a través de una solicitud HTTP, etc.
-        console.log(productoJSON); // Muestra el JSON en la consola para propósitos de depuración
+        console.log(productosJSON); // Muestra el JSON en la consola para propósitos de depuración
 
         Swal.fire("Producto añadido correctamente");
+        form.reset();
     }else{
         Swal.fire({
             icon: "Error.",
