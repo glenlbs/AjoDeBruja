@@ -5,6 +5,14 @@ let telefono = document.getElementById("telefono");
 let txtmessage = document.getElementById("message");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 let alertValidaciones = document.getElementById("alertValidaciones");
+document.addEventListener("DOMContentLoaded", function() {
+   // Verificar si el usuario ya ha iniciado sesión en sesiones anteriores
+var sesionIniciada = localStorage.getItem('sesionIniciada');
+if (sesionIniciada && sesionIniciada === 'true') {
+    // Agregar una clase al elemento <li> de la barra de navegación
+    document.getElementById('cuentaNavItem').classList.add('sesion-iniciada');
+}
+});
 
 btnEnviar.addEventListener("click", function(event){
     event.preventDefault();
