@@ -21,26 +21,31 @@ btnAgregar.addEventListener("click", function(event){
     if(nombresern.test(nombre)){
         console.log("Es un nombre correcto");
     }else{
-        console.log("Este no es nombre correcto");
-        Swal.fire('El nombre no es correcto.');
+        console.log("Este nombre es incorrecto");
+        Swal.fire('El nombre es incorrecto.');
     }
-    if(telefonoern.test(telefono)){
-        console.log("Es un telefono correcto");
-    }else{
-        console.log("No es un telefono correcto");
-        Swal.fire('El telefono no es correcto.');
+    let telefonoValue = telefono.value.replace(/\s/g, ''); // Eliminar espacios
+    if (telefonoValue.length === 10 && !/(.)\1{4,}/.test(telefonoValue)) {
+        console.log("Es un teléfono correcto");
+    } else {
+        Swal.fire({
+            icon: "error",
+            title: "El teléfono es incorrecto.",
+            text: "Vuelve a intentarlo.",
+          });
+        console.log("Este teléfono es incorrecto");
     }
     if(pattern.test(email)){
         console.log("Es un correo correcto");
     }else{
-        console.log("No es un correo correcto");
-        Swal.fire('El correo electronico no es correcto.');
+        console.log("Es un correo incorrecto");
+        Swal.fire('El correo electrónico es incorrecto.');
     }
     if (contrasenaern.test(contraseña)) {
-        console.log('Contraseña 1 valida');
+        console.log('Contraseña 1 válida');
     } else {
-        console.log('Contraseña 1 no valida');
-        Swal.fire('Las contraseñas no es valida. Debe tener 1 mayuscula, 1 minuscula, 1 digito, 1 caracter especial y al menos 8 caracteres.');
+        console.log('Contraseña 1 no válida');
+        Swal.fire('La contraseña no es válida. Debe tener 1 mayúscula, 1 minúscula, 1 dígito, 1 caracter especial y al menos 8 caracteres.');
     }
     // if (contrasenaern.test(contraseñaDos)) {
     //     console.log('Contraseña 2 valida');
@@ -48,9 +53,9 @@ btnAgregar.addEventListener("click", function(event){
     //     console.log('Contraseña 2 no valida');
     // }
     if (contraseña == contraseñaDos){
-        console.log("Contraseñas si coinciden");
+        console.log("Las contraseñas sí coinciden");
     } else {
-        console.log("Contraseñas no coinciden");
+        console.log("Las contraseñas no coinciden");
         Swal.fire('Las contraseñas no coinciden');
     }
 

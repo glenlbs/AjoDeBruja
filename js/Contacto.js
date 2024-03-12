@@ -25,62 +25,56 @@ btnEnviar.addEventListener("click", function(event){
     if(nombresern.test(txtname.value)){
         console.log("Es un nombre correcto");
     }else{
-        // alertValidacionesTexto.insertAdjacentHTML("beforeend", `
-        // El <strong> Nombre </strong> no es correcto.<br/>`);
-        // alertValidaciones.style.display="block";
         Swal.fire({
             icon: "error",
-            title: "El nombre no es correcto.",
+            title: "El nombre es incorrecto.",
             text: "Vuelve a intentarlo.",
           });
-        console.log("Este no es nombre correcto");
+        console.log("Este nombre es incorrecto");
     }
     if(pattern.test(txtemail.value)){
         console.log("Es un correo correcto");
     }else{
-        console.log("Este no es correo correcto");
-        // alertValidacionesTexto.insertAdjacentHTML("beforeend", `
-        // El <strong> Correo </strong> no es correcto.<br/>`);
-        // alertValidaciones.style.display="block";
+        console.log("Este correo es incorrecto");
         Swal.fire({
             icon: "error",
-            title: "El correo no es correcto.",
+            title: "El correo es incorrecto.",
             text: "Vuelve a intentarlo.",
           });
     }
-    if(telefonoern.test(telefono.value)){
-        console.log("Es un Teléfono correcto");
-    }else{
-        // alertValidacionesTexto.insertAdjacentHTML("beforeend", `
-        // El <strong> Teléfono </strong> no es correcto.<br/>`);
-        // alertValidaciones.style.display="block";
+    let telefonoValue = telefono.value.replace(/\s/g, ''); // Eliminar espacios
+    if (telefonoValue.length === 10 && !/(.)\1{4,}/.test(telefonoValue)) {
+        console.log("Es un teléfono correcto");
+    } else {
         Swal.fire({
             icon: "error",
-            title: "El telefono no es correcto.",
+            title: "El teléfono es incorrecto.",
             text: "Vuelve a intentarlo.",
           });
-        console.log("Este no es un Teléfono correcto");
+        console.log("Este teléfono es incorrecto");
     }
+        
     if(messageern.test(txtmessage.value)){
         console.log("Es un mensaje correcto");
     }else{
-        // alertValidacionesTexto.insertAdjacentHTML("beforeend", `
-        // El <strong> mensaje </strong> no es correcto.<br/>`);
-        // alertValidaciones.style.display="block";
         Swal.fire({
             icon: "error",
-            title: "El mensaje no es correcto.",
+            title: "El mensaje es incorrecto.",
             text: "Vuelve a intentarlo.",
           });
-        console.log("Este no es un mensaje correcto");
+        console.log("Este mensaje es incorrecto");
     }
 
     if(nombresern.test(txtname.value)==true && pattern.test(txtemail.value) && telefonoern.test(telefono.value) && messageern.test(txtmessage.value)){
-        // alertValidacionesTexto.insertAdjacentHTML("beforeend", `
-        // Gracias por contactarnos.<br/>`);
         alertValidaciones.style.display="block";
         sendMail();
         Swal.fire("Gracias por contactarnos");
+        // Limpiar los campos después de enviar correctamente
+        txtname.value = "";
+        txtemail.value = "";
+        telefono.value = "";
+        txtmessage.value = "";
+        txtname.focus();
     }
 
     });
@@ -99,9 +93,9 @@ btnEnviar.addEventListener("click", function(event){
         var templateID = "template_6a6ay6j"; /// Email Template ID
         emailjs.send(serviceID, templateID, params)
         alertValidacionesTexto.insertAdjacentHTML("beforeend", `
-        El correo se envio correctamente.<br/>`);
+        El correo se envió correctamente.<br/>`);
         alertValidaciones.style.display="block";
-        console.log("El correo se envio correctamente");
+        console.log("El correo se envió correctamente.");
     }
 
 //Pruebas
