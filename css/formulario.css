@@ -50,6 +50,9 @@ html *{
 .navbar-toggler-icon{
     background-color: #BD5532;
 }
+.btn2{
+  color: white;
+}
 .mb-3{
     background-color: #E1B866;
 }

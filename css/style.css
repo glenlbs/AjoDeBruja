@@ -93,9 +93,13 @@ html *{
 .card-text{
     display: flex;
     text-align: justify;
+    background-color: aliceblue;
 }
 .btn, .bi{
     background-color: #BD5532;
     display: flex;
     justify-content: center;
+}
+.card-body, .card-img-top{
+    background-color: aliceblue;
 }
