@@ -11,7 +11,7 @@ btnAgregar.addEventListener("click", function(event){
      var contraseña = document.getElementById('contrasena').value;
      var contraseñaDos = document.getElementById('contrasenaDos').value;
 
-    let pattern = new RegExp("[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+");
+    let pattern = new RegExp("[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}");
     let nombresern = new RegExp("^[A-ZÑa-zñ0-9áéíóúÁÉÍÓÚ'° ]+$");
     let telefonoern = new RegExp("^(?!^[0-4]{10}$)[0-9]{10,10}$");
     let contrasenaern = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\u0021-\u002b\u003c-\u0040])[A-Za-z0-9\u0021-\u002b\u003c-\u0040]{8,}$");

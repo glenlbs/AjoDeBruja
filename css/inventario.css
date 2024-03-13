@@ -7,15 +7,14 @@ html * {
 }
 .navbarimg{
     background-color: #BD5532;
-    position: relative;
-    z-index: 1;
   }
   .navbarimg2{
     background-color: #BD5532;
-    margin-left: 10px;
   }
   .carrito{
     background-color: #BD5532;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 .active:hover{
     text-decoration: underline;
@@ -27,6 +26,7 @@ html * {
     flex-direction: column;
     align-items: center;
     background-color: #E1B866;
+    justify-content: center;
 }
 
 .container {
@@ -50,15 +50,10 @@ h5 {
 }
 .Titulo{
     font-family: "Meddon", cursive;
-    font-weight: 400;
+    font-weight: 100;
 }
 .navbarBgColor {
     background-color: #BD5532;
-}
-
-.containerAjo {
-    display: flex;
-    justify-content: center;
 }
 
 footer {
@@ -93,6 +88,7 @@ footer {
 
 .containerGreen {
     background-color: #73C8A9;
+    border-radius: 15px;
 }
 .card {
     margin: 10px;

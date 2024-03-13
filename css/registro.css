@@ -145,3 +145,29 @@ body {
     color: rgb(184, 38, 38);
 }
 */
+.formContainer {
+  padding: 20px;
+  margin-top: 10px;
+  background-color: #373B44;
+  border-radius: 20px;
+  max-width: 500px;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrar los elementos verticalmente */
+}
+
+.form-box input,
+.form-box button {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .formContainer {
+    max-width: 100%; /* Cambiar el ancho máximo a 100% para ocupar todo el ancho disponible */
+    border-radius: 0; /* Eliminar el redondeo de los bordes para que se ajuste correctamente en pantallas pequeñas */
+  }
+}

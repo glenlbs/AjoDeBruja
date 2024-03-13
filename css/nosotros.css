@@ -9,15 +9,14 @@ body{
 }
 .navbarimg{
     background-color: #BD5532;
-    position: relative;
-    z-index: 1;
   }
   .navbarimg2{
     background-color: #BD5532;
-    margin-left: 10px;
   }
   .carrito{
     background-color: #BD5532;
+    margin-right: 10px;
+    margin-left: 10px;
   }
 .active:hover{
     text-decoration: underline;
@@ -60,7 +59,6 @@ p{
   .fading {
     transition: opacity 0.3s ease-in-out;
   }
-  
   .fading:hover {
     opacity: 0.7;
   }
@@ -100,8 +98,16 @@ p{
     border-radius: 2%;
     margin-top: 2px;
     background-color: #f0f8ff;
+    width: 100%;
+    display: block;
 }
-
+.col{
+    max-width: fit-content;
+}
+.mvvimg2{
+    max-width: fit-content;
+    margin-left: 30px;
+}
 .card-body {
     display: flex;
     flex-wrap: wrap;
@@ -112,10 +118,6 @@ p{
     font-weight: 400;
     font-size: large;
     margin: 15px 10px 15px 10px;
-}
-img {
-    width: 100%;
-    display: block;
 }
 .card:hover{
     color: rgb(0, 0, 0);
@@ -168,7 +170,6 @@ footer {
   .Titulo{
     font-weight: 700;
     font-size:xx-large;
-    margin-top: 15px;
     margin-block: 50px;
   }
 
