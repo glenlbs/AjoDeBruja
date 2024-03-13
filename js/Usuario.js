@@ -13,7 +13,7 @@ btnAgregar.addEventListener("click", function(event){
 
     let pattern = new RegExp("[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}");
     let nombresern = new RegExp("^[A-ZÑa-zñ0-9áéíóúÁÉÍÓÚ'° ]+$");
-    let telefonoern = new RegExp("^(?!^[0-4]{10}$)[0-9]{10,10}$");
+    let telefonoern = new RegExp("^(?!^[0-4]{10}$)[0-9]{10}$");
     let contrasenaern = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\u0021-\u002b\u003c-\u0040])[A-Za-z0-9\u0021-\u002b\u003c-\u0040]{8,}$");
     //\u0021-\u002b\u003c-\u0040
     //let contrasenaern = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z0-9@$!%*?&]{8,}$")
@@ -24,7 +24,7 @@ btnAgregar.addEventListener("click", function(event){
         console.log("Este nombre es incorrecto");
         Swal.fire('El nombre es incorrecto.');
     }
-    let telefonoValue = telefono.value.replace(/\s/g, ''); // Eliminar espacios
+    let telefonoValue = telefono.replace(/\s/g, ''); // Eliminar espacios
     if (telefonoValue.length === 10 && !/(.)\1{4,}/.test(telefonoValue)) {
         console.log("Es un teléfono correcto");
     } else {

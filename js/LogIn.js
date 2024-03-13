@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 var usuario = JSON.parse(usuarioJSON);
                 
                 // Comprobar si los datos coinciden con algún usuario almacenado
-                if (usuario.email === email && usuario.contraseña === contraseña) {
+                if (user.email === email && user.contraseña === contraseña) {
                     usuarioEncontrado = true;
                     // Guardar el estado de sesión iniciada en localStorage
                     localStorage.setItem('sesionIniciada', 'true');

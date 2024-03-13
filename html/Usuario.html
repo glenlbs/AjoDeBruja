@@ -60,8 +60,8 @@
         </div>
     <form method="post"class="form-box animated fadeInUp" id="Login">
         <h1 class="form-title">Ingresar</h1>
-        <input type="text" placeholder="Email" name="email" id="user">
-        <input type="password" placeholder="Contraseña" name="contraseña" id="contrasena">
+        <input type="text" placeholder="Email" name="email" id="user" required>
+        <input type="password" placeholder="Contraseña" name="contraseña" id="contrasena" style="color: black" required>
 
         <button type="submit" value="ingresar" id="btnAgregar"> Iniciar sesión </button>
     </form>
@@ -70,8 +70,7 @@
     <h4>¿No tienes una cuenta?</h4>
     <h5><a href="Registro.html">Crear cuenta nueva</a></h5>
   </div>
-    <script src="../js/LogIn.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     <footer>
       <hr>    
       <a class="footerItem1" href="https://www.instagram.com/_ajodebruja_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img src="../src/img/insta.png" width="30px" height="30px"></a>
@@ -80,5 +79,7 @@
       </div>
       <p class="corporation footerItem3">© Ajo de Bruja | All Rights Reserved</p>
     </footer>
+    <script src="../js/LogIn.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
