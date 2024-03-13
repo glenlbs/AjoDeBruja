@@ -12,6 +12,22 @@ html *{
       align-items: center;
       background-color: #E1B866;
   }
+  .navbarimg{
+    background-color: #BD5532;
+    position: relative;
+    z-index: 1;
+  }
+  .navbarimg2{
+    background-color: #BD5532;
+    margin-left: 10px;
+  }
+  .carrito{
+    background-color: #BD5532;
+  }
+.active:hover{
+    text-decoration: underline;
+    text-decoration-color: aliceblue;
+}
   .container{
     padding: 20px;
     margin-top: 10px;

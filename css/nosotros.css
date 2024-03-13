@@ -7,11 +7,31 @@ html *{
 body{
     background-color: #dee1b6;
 }
+.navbarimg{
+    background-color: #BD5532;
+    position: relative;
+    z-index: 1;
+  }
+  .navbarimg2{
+    background-color: #BD5532;
+    margin-left: 10px;
+  }
+  .carrito{
+    background-color: #BD5532;
+  }
+.active:hover{
+    text-decoration: underline;
+    text-decoration-color: aliceblue;
+}
 li > a{
     color: white;
 }
 p{
     text-align: justify;
+}
+.Titulo1{
+    font-family: "Meddon", cursive;
+    font-weight: 100;
 }
 .Titulo{
     font-family: "Meddon", cursive;
@@ -57,9 +77,6 @@ p{
 }
 .cardLink:hover{
     transform: scale(1.2);
-}
-.navbarBgColor{
-    background-color: #BD5532;
 }
 .card{
     background-color: #e1b866;
@@ -107,10 +124,7 @@ img {
 .card-body:hover{
     background-color: #73C8A9;
 }
-hr {
-    height: 10px;
-    background-color: #373B44;
-}
+
 .btn-outline-light{
     color: white;
 }
