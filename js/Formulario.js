@@ -19,24 +19,55 @@ btnAgregar.addEventListener("click", function(event){
         console.log("Es un nombre correcto");
     }else{
         console.log("Este no es nombre correcto");
+        Swal.fire({
+            icon: "error",
+            title: "El nombre es incorrecto.",
+            text: "Vuelve a intentarlo.",
+          });
     }
     if(descripcionern.test(descripcion)){
         console.log("Es una descripción correcta");
     }else{
         console.log("No es una descripción correcta");
+        Swal.fire({
+            icon: "error",
+            title: "La descripción es incorrecta.",
+            text: "Vuelve a intentarlo.",
+          });
     }
     if(precioern.test(precio)){
         console.log("Es un precio correcto");
     }else{
         console.log("No es un precio correcto");
+        Swal.fire({
+            icon: "error",
+            title: "El precio es incorrecto.",
+            text: "Vuelve a intentarlo.",
+          });
     }
-    if (imagenern.test(imagenFile.name)) {
-        console.log('Nombre de archivo válido');
+    if (imagenFile) {
+        var fileName = imagenFile.name; // Obtener el nombre del archivo
+    
+        if (imagenern.test(fileName)) {
+            console.log('Nombre de archivo válido');
+        } else {
+            console.log('Nombre de archivo inválido');
+            Swal.fire({
+                icon: "error",
+                title: "El archivo es incorrecto.",
+                text: "Vuelve a intentarlo.",
+            });
+        }
     } else {
-        console.log('Nombre de archivo inválido');
+        console.log('No se ha seleccionado ningún archivo');
+        Swal.fire({
+            icon: "error",
+            title: "No se ha seleccionado ningún archivo.",
+            text: "Vuelve a intentarlo.",
+        });
     }
 
-    if(nombresern.test(nombre)==true && descripcionern.test(descripcion)==true && precioern.test(precio)==true && imagenern.test(imagenFile.name)==true){
+    if(nombresern.test(nombre)==true && descripcionern.test(descripcion)==true && precioern.test(precio)==true && imagenern.test(fileName)==true){
         var productos = JSON.parse(localStorage.getItem('productos')) || [];
         
         // Crear un FileReader para leer el archivo de imagen como base64
@@ -64,16 +95,18 @@ btnAgregar.addEventListener("click", function(event){
 
             Swal.fire("Producto añadido correctamente");
             form.reset();
+            document.getElementById("name").focus();
         };
         // Leer el archivo de imagen como base64
         reader.readAsDataURL(imagenFile);
         
     }else{
-        Swal.fire({
-            icon: "Error.",
+        console.log("No se pudo agregar el producto")
+        /*Swal.fire({
+            icon: "error",
             title: "No se agregó el producto.",
             text: "Vuelve a intentarlo.",
-          });
+          });*/
     }
 
 });

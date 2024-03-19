@@ -94,6 +94,14 @@ footer {
     margin: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
     background-color: #373B44;
+    position: relative; 
+}
+.card .btn-primary {
+    position: absolute; /* Establece la posición absoluta para el botón de "carrito" */
+    bottom: 10px; /* Ajusta la distancia desde la parte inferior de la tarjeta */
+    left: 50%; /* Centra el botón horizontalmente */
+    width: 250px;
+    transform: translateX(-50%); /* Ajusta el centrado horizontal */
 }
 .card:hover{
     transform: scale(1.05);
@@ -106,9 +114,11 @@ footer {
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    margin-bottom: 3px;
 }
 .card-text{
     background-color: aliceblue;
+    margin-bottom: 30px;
 }
 img {
     width: 100%;
@@ -117,9 +127,8 @@ img {
 
 .btn {
     background-color: #BD5532;
-    padding: 10px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .btn i {

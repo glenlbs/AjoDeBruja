@@ -39,13 +39,21 @@ btnAgregar.addEventListener("click", function(event){
         console.log("Es un correo correcto");
     }else{
         console.log("Es un correo incorrecto");
-        Swal.fire('El correo electrónico es incorrecto.');
+        Swal.fire({
+            icon: "error",
+            title: "El correo electrónico es incorrecto.",
+            text: "Vuelve a intentarlo.",
+          });
     }
     if (contrasenaern.test(contraseña)) {
         console.log('Contraseña 1 válida');
     } else {
         console.log('Contraseña 1 no válida');
-        Swal.fire('La contraseña no es válida. Debe tener 1 mayúscula, 1 minúscula, 1 dígito, 1 caracter especial y al menos 8 caracteres.');
+        Swal.fire({
+            icon: "error",
+            title: "La contraseña no es válida. Debe tener al menos 8 carácteres, entre ellos: 1 mayúscula, 1 minúscula, 1 dígito y 1 caracter especial.",
+            text: "Vuelve a intentarlo.",
+          });
     }
     // if (contrasenaern.test(contraseñaDos)) {
     //     console.log('Contraseña 2 valida');
@@ -56,7 +64,11 @@ btnAgregar.addEventListener("click", function(event){
         console.log("Las contraseñas sí coinciden");
     } else {
         console.log("Las contraseñas no coinciden");
-        Swal.fire('Las contraseñas no coinciden');
+        Swal.fire({
+            icon: "error",
+            title: "Las contraseñas no coinciden.",
+            text: "Vuelve a intentarlo.",
+          });
     }
 
     // Obtener la cantidad total de usuarios registrados
@@ -124,11 +136,12 @@ btnAgregar.addEventListener("click", function(event){
 
     // Puedes redirigir a otra página aquí si lo deseas
     }else{
-        Swal.fire({
+        console.log("No pudiste registrarte.")
+       /* Swal.fire({
             icon: "error",
-            title: "No pudiste registrate.",
+            title: "No pudiste registrarte.",
             text: "Vuelve a intentarlo.",
-          });
+          });*/
         }
  });
 

@@ -94,6 +94,14 @@ html *{
     margin-top: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
     background-color: #373B44;
+    position: relative;
+}
+.card .btn-primary {
+    position: absolute; /* Establece la posición absoluta para el botón de "carrito" */
+    bottom: 10px; /* Ajusta la distancia desde la parte inferior de la tarjeta */
+    left: 50%; /* Centra el botón horizontalmente */
+    width: 250px;
+    transform: translateX(-50%); /* Ajusta el centrado horizontal */
 }
 .card:hover{
     transform: scale(1.05);
@@ -110,12 +118,18 @@ html *{
     display: flex;
     text-align: justify;
     background-color: aliceblue;
+    margin-bottom: 30px;
 }
 .btn, .bi{
     background-color: #BD5532;
     display: flex;
     justify-content: center;
 }
-.card-body, .card-img-top{
+.card-body{
     background-color: aliceblue;
+    margin-bottom: 3px;
+}
+.card-img-top{
+    background-color: aliceblue;
+    margin-top: 3px;
 }

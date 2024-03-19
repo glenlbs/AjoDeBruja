@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 var usuario = JSON.parse(usuarioJSON);
                 
                 // Comprobar si los datos coinciden con algún usuario almacenado
-                if (user.email === email && user.contraseña === contraseña) {
+                if (usuario.email === email && usuario.contraseña === contraseña) {
                     usuarioEncontrado = true;
                     // Guardar el estado de sesión iniciada en localStorage
                     localStorage.setItem('sesionIniciada', 'true');
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Si no se encontró el usuario, mostrar un mensaje de error
         if (!usuarioEncontrado) {
-            Swal.fire('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
+            Swal.fire('Correo electrónico y/o contraseña incorrectas. Por favor, inténtalo de nuevo.');
         }
 
         // Limpiar el formulario después de intentar iniciar sesión
@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (sesionIniciada && sesionIniciada === 'true') {
         // Realizar acciones después de detectar que el usuario ya ha iniciado sesión
         // Por ejemplo, redirigir a la página de inicio
+        Swal.fire('Inicio de sesión exitoso');
         window.location.href = "../index.html";
     }
 });
