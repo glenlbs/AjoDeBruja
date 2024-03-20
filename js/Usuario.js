@@ -16,7 +16,7 @@ btnAgregar.addEventListener("click", function(event){
 
     let pattern = new RegExp("[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}");
     let nombresern = new RegExp("^[A-ZÑa-zñ0-9áéíóúÁÉÍÓÚ'° ]+$");
-    let telefonoern = new RegExp("^(?!^[0-4]{10}$)[0-9]{10}$");
+    let telefonoern = new RegExp("^(?!.*(.)(?:.*\\1){4})[0-9]{10}$");
     let contrasenaern = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\u0021-\u002b\u003c-\u0040])[A-Za-z0-9\u0021-\u002b\u003c-\u0040]{8,}$");
     //\u0021-\u002b\u003c-\u0040
     //let contrasenaern = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[@$!%*?&])[A-Za-z0-9@$!%*?&]{8,}$")
@@ -26,43 +26,43 @@ btnAgregar.addEventListener("click", function(event){
     if(nombresern.test(nombre)){
         console.log("Es un nombre correcto");
     }else{
-        // console.log("Este nombre es incorrecto");
-        // Swal.fire('El nombre es incorrecto.');
-        textErrores += `El nombre es incorrecto. <br/>`;
+        console.log("Este nombre es incorrecto");
+        Swal.fire('El nombre es incorrecto.');
+     //   textErrores += `El nombre es incorrecto. <br/>`;
     }
     let telefonoValue = telefono.replace(/\s/g, ''); // Eliminar espacios
     if (telefonoValue.length === 10 && !/(.)\1{4,}/.test(telefonoValue)) {
         console.log("Es un teléfono correcto");
     } else {
-        // Swal.fire({
-        //     icon: "error",
-        //     title: "El teléfono es incorrecto.",
-        //     text: "Vuelve a intentarlo.",
-        //   });
-        // console.log("Este teléfono es incorrecto");
-        textErrores += `El telefono es incorrecto. <br/>`;
+        Swal.fire({
+             icon: "error",
+             title: "El teléfono es incorrecto.",
+             text: "Vuelve a intentarlo.",
+           });
+         console.log("Este teléfono es incorrecto");
+        //textErrores += `El teléfono es incorrecto. <br/>`;
     }
     if(pattern.test(email)){
         console.log("Es un correo correcto");
     }else{
-        // console.log("Es un correo incorrecto");
-        // Swal.fire({
-        //     icon: "error",
-        //     title: "El correo electrónico es incorrecto.",
-        //     text: "Vuelve a intentarlo.",
-        //   });
-        textErrores += `El correo es incorrecto. <br/>`;
+         console.log("Es un correo incorrecto");
+         Swal.fire({
+             icon: "error",
+             title: "El correo electrónico es incorrecto.",
+             text: "Vuelve a intentarlo.",
+           });
+        //textErrores += `El correo es incorrecto. <br/>`;
     }
     if (contrasenaern.test(contraseña)) {
         console.log('Contraseña 1 válida');
     } else {
-        // console.log('Contraseña 1 no válida');
-        // Swal.fire({
-        //     icon: "error",
-        //     title: "La contraseña no es válida. Debe tener al menos 8 carácteres, entre ellos: 1 mayúscula, 1 minúscula, 1 dígito y 1 caracter especial.",
-        //     text: "Vuelve a intentarlo.",
-        //   });
-        textErrores += `La contraseña no es correcta.`;
+         console.log('Contraseña 1 no válida');
+         Swal.fire({
+             icon: "error",
+             title: "La contraseña no es válida. Debe tener al menos 8 carácteres, entre ellos: 1 mayúscula, 1 minúscula, 1 dígito y 1 caracter especial.",
+             text: "Vuelve a intentarlo.",
+           });
+        //textErrores += `La contraseña es incorrecta.`;
     }
     // if (contrasenaern.test(contraseñaDos)) {
     //     console.log('Contraseña 2 valida');
@@ -72,7 +72,7 @@ btnAgregar.addEventListener("click", function(event){
     if (contraseña == contraseñaDos){
         console.log("Las contraseñas sí coinciden");
     } else {
-        // console.log("Las contraseñas no coinciden");
+        console.log("Las contraseñas no coinciden");
         Swal.fire({
             icon: "error",
             title: "Las contraseñas no coinciden.",
@@ -146,14 +146,14 @@ btnAgregar.addEventListener("click", function(event){
     // Puedes redirigir a otra página aquí si lo deseas
     }else{
         console.log("No pudiste registrarte.")
-        Swal.fire({
-                icon: "error",
-                title: "No pudiste registrarte.",
-                text: "Vuelve a intentarlo.",
-            });
-        alertValidacionesTexto.insertAdjacentHTML("beforebegin", textErrores);
+        //Swal.fire({
+        //        icon: "error",
+        //        title: "No pudiste registrarte.",
+        //        text: "Vuelve a intentarlo.",
+        //    });
+        /*alertValidacionesTexto.insertAdjacentHTML("beforebegin", textErrores);
         alertValidaciones.style.display="block";
-        textErrores = "";
+        textErrores = "";*/
         }
  });
 

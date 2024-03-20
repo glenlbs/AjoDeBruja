@@ -20,7 +20,7 @@ if (sesionIniciada && sesionIniciada === 'true') {
 btnEnviar.addEventListener("click", function(event){
     event.preventDefault();
     let pattern = new RegExp("[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}");
-    let telefonoern = new RegExp("^(?!^[0-4]{10}$)[0-9]{10,10}$");
+    let telefonoern = new RegExp("^(?!.*(.)(?:.*\\1){4})[0-9]{10}$");
     let nombresern = new RegExp("^[A-ZÑa-zñáéíóúÁÉÍÓÚ'° ]+$");
     let messageern = new RegExp("^(?=.*[a-zA-Z0-9]).{3,100}$");
     alertValidacionesTexto.innerHTML="";
