@@ -1,4 +1,7 @@
 let btnAgregar = document.getElementById("btnAgregar");
+let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
+let alertValidaciones = document.getElementById("alertValidaciones");
+let textErrores = "";
 
 btnAgregar.addEventListener("click", function(event){
     event.preventDefault(); // Evita que el formulario se envíe automáticamente
@@ -15,35 +18,40 @@ btnAgregar.addEventListener("click", function(event){
     let precioern = new RegExp("^[-+]?[0-9]*\.?[0-9]+([eE][-+]?[0-9]+)?$");
     let imagenern = new RegExp("\.(png|jpg)$");
 
+    alertValidacionesTexto.innerHTML="";
+    alertValidaciones.style.display="none";
     if(nombresern.test(nombre)){
         console.log("Es un nombre correcto");
     }else{
-        console.log("Este no es nombre correcto");
-        Swal.fire({
-            icon: "error",
-            title: "El nombre es incorrecto.",
-            text: "Vuelve a intentarlo.",
-          });
+        // console.log("Este no es nombre correcto");
+        // Swal.fire({
+        //     icon: "error",
+        //     title: "El nombre es incorrecto.",
+        //     text: "Vuelve a intentarlo.",
+        //   });
+        textErrores += "El nombre no es correcto. <br/>";
     }
     if(descripcionern.test(descripcion)){
         console.log("Es una descripción correcta");
     }else{
-        console.log("No es una descripción correcta");
-        Swal.fire({
-            icon: "error",
-            title: "La descripción es incorrecta.",
-            text: "Vuelve a intentarlo.",
-          });
+        // console.log("No es una descripción correcta");
+        // Swal.fire({
+        //     icon: "error",
+        //     title: "La descripción es incorrecta.",
+        //     text: "Vuelve a intentarlo.",
+        //   });
+        textErrores += "La descripción no es correcta. <br/>"
     }
     if(precioern.test(precio)){
         console.log("Es un precio correcto");
     }else{
-        console.log("No es un precio correcto");
-        Swal.fire({
-            icon: "error",
-            title: "El precio es incorrecto.",
-            text: "Vuelve a intentarlo.",
-          });
+        // console.log("No es un precio correcto");
+        // Swal.fire({
+        //     icon: "error",
+        //     title: "El precio es incorrecto.",
+        //     text: "Vuelve a intentarlo.",
+        //   });
+        textErrores += "El precio no es correcto. <br/>";
     }
     if (imagenFile) {
         var fileName = imagenFile.name; // Obtener el nombre del archivo
@@ -51,20 +59,22 @@ btnAgregar.addEventListener("click", function(event){
         if (imagenern.test(fileName)) {
             console.log('Nombre de archivo válido');
         } else {
-            console.log('Nombre de archivo inválido');
-            Swal.fire({
-                icon: "error",
-                title: "El archivo es incorrecto.",
-                text: "Vuelve a intentarlo.",
-            });
+            // console.log('Nombre de archivo inválido');
+            // Swal.fire({
+            //     icon: "error",
+            //     title: "El archivo es incorrecto.",
+            //     text: "Vuelve a intentarlo.",
+            // });
+        textErrores += "Archivo de imagen no válido. <br/>";
         }
     } else {
-        console.log('No se ha seleccionado ningún archivo');
-        Swal.fire({
-            icon: "error",
-            title: "No se ha seleccionado ningún archivo.",
-            text: "Vuelve a intentarlo.",
-        });
+        // console.log('No se ha seleccionado ningún archivo');
+        // Swal.fire({
+        //     icon: "error",
+        //     title: "No se ha seleccionado ningún archivo.",
+        //     text: "Vuelve a intentarlo.",
+        // });
+        textErrores += "No se ha seleccionado la imagen.";
     }
 
     if(nombresern.test(nombre)==true && descripcionern.test(descripcion)==true && precioern.test(precio)==true && imagenern.test(fileName)==true){
@@ -102,11 +112,14 @@ btnAgregar.addEventListener("click", function(event){
         
     }else{
         console.log("No se pudo agregar el producto")
-        /*Swal.fire({
+        Swal.fire({
             icon: "error",
-            title: "No se agregó el producto.",
+            title: "Error",
             text: "Vuelve a intentarlo.",
-          });*/
+          });
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", textErrores);
+        alertValidaciones.style.display="block";
+        textErrores = "";
     }
 
 });

@@ -165,6 +165,13 @@ body {
   margin-bottom: 10px;
 }
 
+.linkLogIn, h4{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #DEE1B6;
+}
+
 @media (max-width: 600px) {
   .formContainer {
     max-width: 100%; /* Cambiar el ancho máximo a 100% para ocupar todo el ancho disponible */

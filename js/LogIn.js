@@ -1,3 +1,7 @@
+let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
+let alertValidaciones = document.getElementById("alertValidaciones");
+let textErrores = "";
+
 document.addEventListener("DOMContentLoaded", function() {
     var form = document.getElementById('Login');
 
@@ -11,6 +15,9 @@ document.addEventListener("DOMContentLoaded", function() {
         // Obtener los datos del usuario almacenados en localStorage
         var currentIndex = localStorage.getItem('currentIndex');
         var usuarioEncontrado = false;
+
+        alertValidacionesTexto.innerHTML="";
+        alertValidaciones.style.display="none";
 
         // Verificar si hay usuarios almacenados en localStorage
         if (currentIndex) {
@@ -30,7 +37,16 @@ document.addEventListener("DOMContentLoaded", function() {
                     Swal.fire('Inicio de sesión exitoso');
                     window.location.href = "../index.html";
                     break;
-                }
+                }// }else{
+                //     Swal.fire({
+                //         icon: "error",
+                //         title: "Error",
+                //         text: "Vuelve a intentarlo.",
+                //       });
+                //     alertValidacionesTexto.insertAdjacentHTML("beforeend", textErrores);
+                //     alertValidaciones.style.display="block";
+                //     textErrores = "";
+                // }
             }
         }
 

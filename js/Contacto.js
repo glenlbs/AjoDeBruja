@@ -5,6 +5,8 @@ let telefono = document.getElementById("telefono");
 let txtmessage = document.getElementById("message");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
 let alertValidaciones = document.getElementById("alertValidaciones");
+let textErrores = "";
+
 document.addEventListener("DOMContentLoaded", function() {
    // Verificar si el usuario ya ha iniciado sesión en sesiones anteriores
 var sesionIniciada = localStorage.getItem('sesionIniciada');
@@ -25,44 +27,48 @@ btnEnviar.addEventListener("click", function(event){
     if(nombresern.test(txtname.value)){
         console.log("Es un nombre correcto");
     }else{
-        Swal.fire({
-            icon: "error",
-            title: "El nombre es incorrecto.",
-            text: "Vuelve a intentarlo.",
-          });
-        console.log("Este nombre es incorrecto");
+        // Swal.fire({
+        //     icon: "error",
+        //     title: "El nombre es incorrecto.",
+        //     text: "Vuelve a intentarlo.",
+        //   });
+        // console.log("Este nombre es incorrecto");
+        textErrores += `El nombre es incorrecto. <br/>`;
     }
     if(pattern.test(txtemail.value)){
         console.log("Es un correo correcto");
     }else{
-        console.log("Este correo es incorrecto");
-        Swal.fire({
-            icon: "error",
-            title: "El correo es incorrecto.",
-            text: "Vuelve a intentarlo.",
-          });
+        // console.log("Este correo es incorrecto");
+        // Swal.fire({
+        //     icon: "error",
+        //     title: "El correo es incorrecto.",
+        //     text: "Vuelve a intentarlo.",
+        //   });
+          textErrores += "El correo es incorrecto. <br/>";
     }
     let telefonoValue = telefono.value.replace(/\s/g, ''); // Eliminar espacios
     if (telefonoValue.length === 10 && !/(.)\1{4,}/.test(telefonoValue)) {
         console.log("Es un teléfono correcto");
     } else {
-        Swal.fire({
-            icon: "error",
-            title: "El teléfono es incorrecto.",
-            text: "Vuelve a intentarlo.",
-          });
-        console.log("Este teléfono es incorrecto");
+        // Swal.fire({
+        //     icon: "error",
+        //     title: "El teléfono es incorrecto.",
+        //     text: "Vuelve a intentarlo.",
+        //   });
+        // console.log("Este teléfono es incorrecto");
+        textErrores += "El teléfono es incorrecto. <br/>";
     }
         
     if(messageern.test(txtmessage.value)){
         console.log("Es un mensaje correcto");
     }else{
-        Swal.fire({
-            icon: "error",
-            title: "El mensaje es incorrecto.",
-            text: "Vuelve a intentarlo.",
-          });
-        console.log("Este mensaje es incorrecto");
+        // Swal.fire({
+        //     icon: "error",
+        //     title: "El mensaje es incorrecto.",
+        //     text: "Vuelve a intentarlo.",
+        //   });
+        // console.log("Este mensaje es incorrecto");
+        textErrores += "El mensaje es incorrecto.";
     }
 
     if(nombresern.test(txtname.value)==true && pattern.test(txtemail.value) && telefonoern.test(telefono.value) && messageern.test(txtmessage.value)){
@@ -75,6 +81,15 @@ btnEnviar.addEventListener("click", function(event){
         telefono.value = "";
         txtmessage.value = "";
         txtname.focus();
+    }else{
+        Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: "Vuelve a intentarlo.",
+          });
+        alertValidacionesTexto.insertAdjacentHTML("beforeend", textErrores);
+        alertValidaciones.style.display="block";
+        textErrores = "";
     }
 
     });
