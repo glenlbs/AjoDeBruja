@@ -27,13 +27,20 @@ html *{
   }
   .formContainer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 20px;
     margin-top: 10px;
     background-color: #373B44; /*container y from*/
     border-radius: 20px;
     width: 500px;
   }
+  .alert {
+    width: 100%;
+    margin-top: -5px;
+    margin-bottom: 10px; /* Ajusta el espacio entre la alerta y el formulario */
+}
   .navbarBgColor{
       background-color: #BD5532;
   }
@@ -42,7 +49,7 @@ html *{
   }
 
   form{
-    background-color: #E1B866;
+    max-width: 470px;
   }
   footer {
     display: flex;

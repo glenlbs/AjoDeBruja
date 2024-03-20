@@ -151,7 +151,7 @@ btnAgregar.addEventListener("click", function(event){
                 title: "No pudiste registrarte.",
                 text: "Vuelve a intentarlo.",
             });
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", textErrores);
+        alertValidacionesTexto.insertAdjacentHTML("beforebegin", textErrores);
         alertValidaciones.style.display="block";
         textErrores = "";
         }

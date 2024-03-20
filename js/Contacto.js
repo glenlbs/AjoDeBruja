@@ -4,6 +4,7 @@ let txtemail = document.getElementById("email");
 let telefono = document.getElementById("telefono");
 let txtmessage = document.getElementById("message");
 let alertValidacionesTexto = document.getElementById("alertValidacionesTexto");
+let alertValidacionesTexto2 = document.getElementById("alertValidacionesTexto2");
 let alertValidaciones = document.getElementById("alertValidaciones");
 let textErrores = "";
 
@@ -24,6 +25,8 @@ btnEnviar.addEventListener("click", function(event){
     let messageern = new RegExp("^(?=.*[a-zA-Z0-9]).{3,100}$");
     alertValidacionesTexto.innerHTML="";
     alertValidaciones.style.display="none";
+    alertValidacionesTexto2.innerHTML="";
+    alertValidaciones2.style.display="none";
     if(nombresern.test(txtname.value)){
         console.log("Es un nombre correcto");
     }else{
@@ -72,7 +75,7 @@ btnEnviar.addEventListener("click", function(event){
     }
 
     if(nombresern.test(txtname.value)==true && pattern.test(txtemail.value) && telefonoern.test(telefono.value) && messageern.test(txtmessage.value)){
-        alertValidaciones.style.display="block";
+        alertValidaciones2.style.display="block";
         sendMail();
         Swal.fire("Gracias por contactarnos");
         // Limpiar los campos después de enviar correctamente
@@ -87,7 +90,7 @@ btnEnviar.addEventListener("click", function(event){
             title: "Error",
             text: "Vuelve a intentarlo.",
           });
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", textErrores);
+        alertValidacionesTexto.insertAdjacentHTML("beforebegin", textErrores);
         alertValidaciones.style.display="block";
         textErrores = "";
     }
@@ -107,9 +110,9 @@ btnEnviar.addEventListener("click", function(event){
         var serviceID = "service_suoyq8b"; /// Email Service ID
         var templateID = "template_6a6ay6j"; /// Email Template ID
         emailjs.send(serviceID, templateID, params)
-        alertValidacionesTexto.insertAdjacentHTML("beforeend", `
+        alertValidacionesTexto2.insertAdjacentHTML("beforebegin", `
         El correo se envió correctamente.<br/>`);
-        alertValidaciones.style.display="block";
+        alertValidaciones2.style.display="block";
         console.log("El correo se envió correctamente.");
     }
 
