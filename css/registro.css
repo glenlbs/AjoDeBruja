@@ -152,6 +152,12 @@ body {
   border-radius: 20px;
   max-width: 500px;
 }
+.linkRegistro, h4{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #DEE1B6;
+}
 
 .form-box {
   display: flex;
