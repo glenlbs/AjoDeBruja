@@ -178,6 +178,14 @@ footer {
     margin-top: 15px;
     margin-block: 50px;
   }
+  *h4{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  *p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 
 /*Animation*/
 .fading{
@@ -192,4 +200,18 @@ opacity: 0;
 100% {
 opacity: 1;
 }
+}
+
+
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+footer{
+    margin-top: auto;
 }
