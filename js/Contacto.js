@@ -36,7 +36,7 @@ btnEnviar.addEventListener("click", function(event){
         //     text: "Vuelve a intentarlo.",
         //   });
         // console.log("Este nombre es incorrecto");
-        textErrores += `El nombre es incorrecto. <br/>`;
+        textErrores += `El nombre no permite caractéres especiales y números.`;
     }
     if(pattern.test(txtemail.value)){
         console.log("Es un correo correcto");
@@ -47,7 +47,7 @@ btnEnviar.addEventListener("click", function(event){
         //     title: "El correo es incorrecto.",
         //     text: "Vuelve a intentarlo.",
         //   });
-          textErrores += "El correo es incorrecto. <br/>";
+          textErrores += "<br/>El correo no debe estar sin caracteres antes y después del dominio, y del punto.";
     }
     let telefonoValue = telefono.value.replace(/\s/g, ''); // Eliminar espacios
     if (telefonoValue.length === 10 && !/(.)\1{4,}/.test(telefonoValue)) {
@@ -59,7 +59,7 @@ btnEnviar.addEventListener("click", function(event){
         //     text: "Vuelve a intentarlo.",
         //   });
         // console.log("Este teléfono es incorrecto");
-        textErrores += "El teléfono es incorrecto. <br/>";
+        textErrores += "<br/>El teléfono debe ser de 10 caractéres y de diferentes digitos entre sí.";
     }
         
     if(messageern.test(txtmessage.value)){
@@ -71,7 +71,7 @@ btnEnviar.addEventListener("click", function(event){
         //     text: "Vuelve a intentarlo.",
         //   });
         // console.log("Este mensaje es incorrecto");
-        textErrores += "El mensaje es incorrecto.";
+        textErrores += "<br/>El mensaje debe ser mayor a 3 caracteres y sin muchos caracteres especiales.";
     }
 
     if(nombresern.test(txtname.value)==true && pattern.test(txtemail.value) && telefonoern.test(telefono.value) && messageern.test(txtmessage.value)){
