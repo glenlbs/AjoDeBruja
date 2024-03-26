@@ -29,7 +29,7 @@ btnAgregar.addEventListener("click", function(event){
         //     title: "El nombre es incorrecto.",
         //     text: "Vuelve a intentarlo.",
         //   });
-        textErrores += "El nombre no es correcto. <br/>";
+        textErrores += "El nombre no permite caractéres especiales y números.";
     }
     if(descripcionern.test(descripcion)){
         console.log("Es una descripción correcta");
@@ -40,7 +40,7 @@ btnAgregar.addEventListener("click", function(event){
         //     title: "La descripción es incorrecta.",
         //     text: "Vuelve a intentarlo.",
         //   });
-        textErrores += "La descripción no es correcta. <br/>"
+        textErrores += "<br/>La descripción debe ser mayor a 3 caracteres y sin muchos caracteres especiales."
     }
     if(precioern.test(precio)){
         console.log("Es un precio correcto");
@@ -51,7 +51,7 @@ btnAgregar.addEventListener("click", function(event){
         //     title: "El precio es incorrecto.",
         //     text: "Vuelve a intentarlo.",
         //   });
-        textErrores += "El precio no es correcto. <br/>";
+        textErrores += "<br/>El precio solo acepta digitos, y valores en decimal a su preferencia.";
     }
     if (imagenFile) {
         var fileName = imagenFile.name; // Obtener el nombre del archivo
@@ -65,7 +65,7 @@ btnAgregar.addEventListener("click", function(event){
             //     title: "El archivo es incorrecto.",
             //     text: "Vuelve a intentarlo.",
             // });
-        textErrores += "Archivo de imagen no válido. <br/>";
+        textErrores += "<br/>Archivo de imagen debe ser jpg o png.";
         }
     } else {
         // console.log('No se ha seleccionado ningún archivo');
@@ -74,7 +74,7 @@ btnAgregar.addEventListener("click", function(event){
         //     title: "No se ha seleccionado ningún archivo.",
         //     text: "Vuelve a intentarlo.",
         // });
-        textErrores += "No se ha seleccionado la imagen.";
+        textErrores += "<br/>No se ha seleccionado la imagen.";
     }
 
     if(nombresern.test(nombre)==true && descripcionern.test(descripcion)==true && precioern.test(precio)==true && imagenern.test(fileName)==true){

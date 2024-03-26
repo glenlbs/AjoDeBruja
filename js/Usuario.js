@@ -23,52 +23,6 @@ btnAgregar.addEventListener("click", function(event){
     alertValidacionesTexto.innerHTML="";
     alertValidaciones.style.display="none";
     
-    if(nombresern.test(nombre)){
-        console.log("Es un nombre correcto");
-    }else{
-        console.log("Este nombre es incorrecto");
-        Swal.fire('El nombre es incorrecto.');
-     //   textErrores += `El nombre es incorrecto. <br/>`;
-    }
-    let telefonoValue = telefono.replace(/\s/g, ''); // Eliminar espacios
-    if (telefonoValue.length === 10 && !/(.)\1{4,}/.test(telefonoValue)) {
-        console.log("Es un teléfono correcto");
-    } else {
-        Swal.fire({
-             icon: "error",
-             title: "El teléfono es incorrecto.",
-             text: "Vuelve a intentarlo.",
-           });
-         console.log("Este teléfono es incorrecto");
-        //textErrores += `El teléfono es incorrecto. <br/>`;
-    }
-    if(pattern.test(email)){
-        console.log("Es un correo correcto");
-    }else{
-         console.log("Es un correo incorrecto");
-         Swal.fire({
-             icon: "error",
-             title: "El correo electrónico es incorrecto.",
-             text: "Vuelve a intentarlo.",
-           });
-        //textErrores += `El correo es incorrecto. <br/>`;
-    }
-    if (contrasenaern.test(contraseña)) {
-        console.log('Contraseña 1 válida');
-    } else {
-         console.log('Contraseña 1 no válida');
-         Swal.fire({
-             icon: "error",
-             title: "La contraseña no es válida. Debe tener al menos 8 carácteres, entre ellos: 1 mayúscula, 1 minúscula, 1 dígito y 1 caracter especial.",
-             text: "Vuelve a intentarlo.",
-           });
-        //textErrores += `La contraseña es incorrecta.`;
-    }
-    // if (contrasenaern.test(contraseñaDos)) {
-    //     console.log('Contraseña 2 valida');
-    // } else {
-    //     console.log('Contraseña 2 no valida');
-    // }
     if (contraseña == contraseñaDos){
         console.log("Las contraseñas sí coinciden");
     } else {
@@ -78,6 +32,52 @@ btnAgregar.addEventListener("click", function(event){
             title: "Las contraseñas no coinciden.",
             text: "Vuelve a intentarlo.",
           });
+    }
+    // if (contrasenaern.test(contraseñaDos)) {
+    //     console.log('Contraseña 2 valida');
+    // } else {
+    //     console.log('Contraseña 2 no valida');
+    // }
+    if (contrasenaern.test(contraseña)) {
+        console.log('Contraseña 1 válida');
+    } else {
+        //  console.log('Contraseña 1 no válida');
+        //  Swal.fire({
+        //      icon: "error",
+        //      title: "La contraseña no es válida. Debe tener al menos 8 carácteres, entre ellos: 1 mayúscula, 1 minúscula, 1 dígito y 1 caracter especial.",
+        //      text: "Vuelve a intentarlo.",
+        //    });
+        textErrores += `La contraseña debe ser de al menos ocho caracteres, una letra mayúscula, una letra minúscula, un dígito y un caracter especial.`;
+    }
+    if(pattern.test(email)){
+        console.log("Es un correo correcto");
+    }else{
+        //  console.log("Es un correo incorrecto");
+        //  Swal.fire({
+        //      icon: "error",
+        //      title: "El correo electrónico es incorrecto.",
+        //      text: "Vuelve a intentarlo.",
+        //    });
+        textErrores += `<br/>El correo no debe estar sin caracteres antes y después del dominio, y del punto.`;
+    }
+    let telefonoValue = telefono.replace(/\s/g, ''); // Eliminar espacios
+    if (telefonoValue.length === 10 && !/(.)\1{4,}/.test(telefonoValue)) {
+        console.log("Es un teléfono correcto");
+    } else {
+        // Swal.fire({
+        //      icon: "error",
+        //      title: "El teléfono es incorrecto.",
+        //      text: "Vuelve a intentarlo.",
+        //    });
+        // console.log("Este teléfono es incorrecto");
+        textErrores += `<br/>El teléfono debe ser de 10 caractéres y de diferentes digitos entre sí.`;
+    }
+    if(nombresern.test(nombre)){
+        console.log("Es un nombre correcto");
+    }else{
+        // console.log("Este nombre es incorrecto");
+        // Swal.fire('El nombre es incorrecto.');
+        textErrores += `<br/>El nombre no permite caractéres especiales y números.`;
     }
 
     // Obtener la cantidad total de usuarios registrados
@@ -145,15 +145,15 @@ btnAgregar.addEventListener("click", function(event){
 
     // Puedes redirigir a otra página aquí si lo deseas
     }else{
-        console.log("No pudiste registrarte.")
-        //Swal.fire({
-        //        icon: "error",
-        //        title: "No pudiste registrarte.",
-        //        text: "Vuelve a intentarlo.",
-        //    });
-        /*alertValidacionesTexto.insertAdjacentHTML("beforebegin", textErrores);
+        //console.log("No pudiste registrarte.")
+        Swal.fire({
+               icon: "error",
+               title: "No pudiste registrarte.",
+               text: "Vuelve a intentarlo.",
+           });
+        alertValidacionesTexto.insertAdjacentHTML("beforebegin", textErrores);
         alertValidaciones.style.display="block";
-        textErrores = "";*/
+        textErrores = "";
         }
  });
 
